@@ -10,7 +10,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!--mọi người paste cái này vào head giùm tui nha tại tui có nhúng font awesome để lấy icon á-->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="AUTH.js" defer></script>
   </head>
   <body>
     <!-- ===== Header ===== -->
@@ -27,7 +28,17 @@
           <li><a href="LienHe.html">Liên hệ</a></li>
         </ul>
       </nav>
-      <button class="btn-login"><span>&#128100;</span> Đăng nhập</button>
+      <div id="authSection">
+        <button class="btn-login" id="loginBtn" onclick="window.location.href = 'login.html'">
+          <span>&#128100;</span> Đăng nhập
+        </button>
+        <div id="userMenu" style="display:none; align-items:center; gap:12px;">
+          <span id="userName" style="font-weight:600; color:#2b2b2b; font-size:14px;"></span>
+          <button class="btn-logout" onclick="handleLogout()" style="background:#e53935; color:#fff; padding:8px 18px; border:none; border-radius:20px; font-weight:600; font-size:13px; cursor:pointer; transition:background 0.2s;">
+            Đăng xuất
+          </button>
+        </div>
+      </div>
     </header>
 
     <!-- ===== Hero Section ===== -->
@@ -232,5 +243,33 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Check auth state on page load & show user name / logout
+      async function checkAuth() {
+        const { data } = await getSession();
+        const loginBtn = document.getElementById("loginBtn");
+        const userMenu = document.getElementById("userMenu");
+        const userName = document.getElementById("userName");
+
+        if (data?.session?.user) {
+          loginBtn.style.display = "none";
+          userMenu.style.display = "inline-flex";
+          // Show email or full_name if available
+          userName.textContent = data.session.user.email;
+        } else {
+          loginBtn.style.display = "inline-flex";
+          userMenu.style.display = "none";
+        }
+      }
+
+      async function handleLogout() {
+        await signOut();
+        window.location.reload();
+      }
+
+      // Wait for AUTH.js to load, then check
+      document.addEventListener("DOMContentLoaded", checkAuth);
+    </script>
   </body>
 </html>

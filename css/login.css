@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+  max-width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fafafa;
+  text-align: center;
+}
+form {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  text-align: left;
+}
+input,
+button {
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  background: #f5821f;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:disabled {
+  background: #ccc;
+}
+.tabs {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.tabs button {
+  background: #eee;
+  color: #333;
+}
+.tabs .active {
+  background: #f5821f;
+  color: white;
+}
+.msg {
+  padding: 8px;
+  font-size: 13px;
+  display: none;
+  font-weight: bold;
+}
+.error {
+  display: block;
+  color: red;
+}
+.success {
+  display: block;
+  color: green;
+}
