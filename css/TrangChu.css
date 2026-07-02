@@ -101,6 +101,26 @@ ul {
   background-color: #43a047;
 }
 
+.btn-register {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f5821f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-register:hover {
+  background-color: #e0701a;
+  transform: translateY(-2px);
+}
+
 /* ===== Hero Section ===== */
 .hero {
   position: relative;
@@ -464,6 +484,271 @@ ul {
 .menu-card-add:hover {
   background-color: #e0701a;
   transform: scale(1.1);
+}
+
+/* ===== Toast Notification ===== */
+.toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 380px;
+  transform: translateX(120%);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+}
+
+.toast.toast-visible {
+  transform: translateX(0);
+}
+
+.toast-success {
+  background-color: #f0fdf4;
+  color: #2e7d32;
+  border-left: 4px solid #4caf50;
+}
+
+.toast-info {
+  background-color: #fff7ed;
+  color: #b45309;
+  border-left: 4px solid #f5821f;
+}
+
+.toast-error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border-left: 4px solid #e53935;
+}
+
+.toast-icon {
+  font-size: 18px;
+  font-weight: 800;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.toast-success .toast-icon {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.toast-info .toast-icon {
+  background-color: #f5821f;
+  color: #fff;
+}
+
+.toast-error .toast-icon {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.toast-message {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+  padding: 0 2px;
+  line-height: 1;
+  flex-shrink: 0;
+  width: auto;
+}
+
+.toast-close:hover {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .toast {
+    top: 12px;
+    right: 12px;
+    left: 12px;
+    max-width: none;
+    font-size: 13px;
+    padding: 12px 16px;
+  }
+}
+
+/* ===== Register Modal ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 32px 32px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  line-height: 1;
+  padding: 0;
+  width: auto;
+}
+
+.modal-close:hover {
+  color: #1f1f1f;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1f1f1f;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.modal-subtitle {
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#registerForm input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1f1f1f;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+#registerForm input:focus {
+  border-color: #f5821f;
+}
+
+#registerForm .msg {
+  padding: 10px 12px;
+  font-size: 13px;
+  display: none;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#registerForm .msg.error {
+  display: block;
+  color: #e53935;
+  background-color: #fef2f2;
+}
+
+#registerForm .msg.success {
+  display: block;
+  color: #2e7d32;
+  background-color: #f0fdf4;
+}
+
+#registerForm button[type="submit"] {
+  width: 100%;
+  height: 48px;
+  background-color: #f5821f;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#registerForm button[type="submit"]:hover {
+  background-color: #e0701a;
+  transform: translateY(-2px);
+}
+
+#registerForm button[type="submit"]:disabled {
+  background-color: #ccc;
+  transform: none;
+  cursor: default;
+}
+
+.modal-footer-text {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.modal-footer-text a {
+  color: #f5821f;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.modal-footer-text a:hover {
+  color: #e0701a;
+}
+
+#authSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* ===== Responsive ===== */
