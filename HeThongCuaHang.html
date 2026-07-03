@@ -1,140 +1,154 @@
 <html lang="vi">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/HeThongCuaHang.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Hệ Thống Cửa Hàng</title>
-</head>
-<body>
-   <!-- ===== Header ===== -->
+  </head>
+  <body>
+    <!-- ===== Header ===== -->
     <header class="header">
       <div class="logo">
         <img src="images/logo.png" alt="Fast Bite Logo" />
       </div>
       <nav>
         <ul class="nav-menu">
-          <li><a href="#" class="active">Trang Chủ</a></li>
+          <li><a href="TrangChu.html">Trang Chủ</a></li>
           <li><a href="GioiThieu.html">Giới Thiệu</a></li>
           <li><a href="ThucDon.html">Thực Đơn</a></li>
-          <li><a href="HeThongCuaHang.html">Hệ Thống Cửa Hàng</a></li>
+          <li><a href="#" class="active">Hệ Thống Cửa Hàng</a></li>
           <li><a href="LienHe.html">Liên hệ</a></li>
         </ul>
       </nav>
       <button class="btn-login"><span>&#128100;</span> Đăng nhập</button>
     </header>
-   <main>
-    <div class="page-name">
+    <main>
+      <div class="page-name">
         <h1>Hệ Thống Cửa Hàng</h1>
-    </div>
-    
-    <div class="layout-wrapper">
+      </div>
+
+      <div class="layout-wrapper">
         <div class="sidebar">
-            <h2>Tìm cửa hàng</h2>
-            <div class="form">
-                <form>
-                    <label for="province">Chọn tỉnh thành:</label>
-                    <select id="province">
-                        <option value="can-tho">Cần Thơ</option>
-                    </select>
-                    
-                    <label for="district">Chọn quận - huyện:</label>
-                    <select id="district">
-                        <option value="ninh-kieu">Ninh Kiều</option>
-                        <option value="o-mon">Ô Môn</option>
-                        <option value="thot-not">Thốt Nốt</option>
-                        <option value="co-do">Cờ Đỏ</option>
-                    </select>
-                </form>
+          <h2>Tìm cửa hàng</h2>
+          <div class="form">
+            <form>
+              <label for="province">Chọn tỉnh thành:</label>
+              <select id="province">
+                <option value="can-tho">Cần Thơ</option>
+              </select>
+
+              <label for="district">Chọn quận - huyện:</label>
+              <select id="district">
+                <option value="ninh-kieu">Ninh Kiều</option>
+                <option value="o-mon">Ô Môn</option>
+                <option value="thot-not">Thốt Nốt</option>
+                <option value="co-do">Cờ Đỏ</option>
+              </select>
+            </form>
+          </div>
+
+          <div class="store-list">
+            <div class="store-item">
+              <h3>Jolibee 3/2</h3>
+              <p><i class="fa-solid fa-location-dot"></i> 144b 3 tháng 2, Xuân
+                Khánh, Ninh Kiều, Cần Thơ</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-2h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900558850</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7857.740305421697!2d105.76780497479406!3d10.027572390079312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883b54d5d889%3A0x7d757ddb0677d957!2sOmega%203%20th%C3%A1ng%202!5e0!3m2!1svi!2s!4v1781351540368!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
             </div>
-            
-            <div class="store-list">
-                <div class="store-item">
-                    <h3>Jolibee 3/2</h3>
-                    <p><i class="fa-solid fa-location-dot"></i> 144b 3 tháng 2, Xuân Khánh, Ninh Kiều, Cần Thơ</p>
-                    <p><i class="fa-regular fa-clock"></i> <strong>9h30-2h</strong></p>
-                    <p><i class="fa-solid fa-phone"></i> <strong>1900558850</strong></p>
-                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7857.740305421697!2d105.76780497479406!3d10.027572390079312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883b54d5d889%3A0x7d757ddb0677d957!2sOmega%203%20th%C3%A1ng%202!5e0!3m2!1svi!2s!4v1781351540368!5m2!1svi!2s" target="khung-map" class="btn-map">Xem bản đồ</a>
-                </div>
-                <div class="store-item">
-                    <h3>Jolibee Ngô Quyền</h3>
-                    <p><i class="fa-solid fa-location-dot"></i> 65 Ngô Quyền, An Cư, Ninh Kiều, Cần Thơ</p>
-                    <p><i class="fa-regular fa-clock"></i> <strong>10h30-22h</strong></p>
-                    <p><i class="fa-solid fa-phone"></i> <strong>1900111111</strong></p>
-                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.777019918857!2d105.78209447479404!3d10.035250490071935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a08901afbb32e1%3A0x28b2f0ba57b219fc!2zT21lZ2EgTmfDtCBRdXnhu4Fu!5e0!3m2!1svi!2s!4v1781352317493!5m2!1svi!2" target="khung-map" class="btn-map">Xem bản đồ</a>
-                </div>
+            <div class="store-item">
+              <h3>Jolibee Ngô Quyền</h3>
+              <p><i class="fa-solid fa-location-dot"></i> 65 Ngô Quyền, An Cư,
+                Ninh Kiều, Cần Thơ</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>10h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900111111</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.777019918857!2d105.78209447479404!3d10.035250490071935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a08901afbb32e1%3A0x28b2f0ba57b219fc!2zT21lZ2EgTmfDtCBRdXnhu4Fu!5e0!3m2!1svi!2s!4v1781352317493!5m2!1svi!2"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
             </div>
+          </div>
         </div>
 
         <div class="map-section">
-            <iframe
-                name="khung-map" 
-                src="https://maps.google.com/maps?q=144b%203%20tháng%202,%20Xuân%20Khánh,%20Ninh%20Kiều,%20Cần%20Thơ&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
-    </div>
-</main>
-  <footer class="site-footer">
-  <div class="container">
-
-    <div class="footer-top">
-      <div class="newsletter-box">
-        <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Nhập email của bạn..." required>
-          <button type="button">Đăng ký</button>
-        </form>
-      </div>
-
-      <div class="social-box">
-        <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
-        <div class="social-icons">
-          <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <iframe
+            name="khung-map"
+            src="https://maps.google.com/maps?q=144b%203%20tháng%202,%20Xuân%20Khánh,%20Ninh%20Kiều,%20Cần%20Thơ&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
         </div>
       </div>
-    </div>
-    <div class="footer-main">
-      
-      <div class="footer-links">
-        <div class="footer-col">
-          <h3>CHÍNH SÁCH</h3>
-          <ul>
-            <li><a href="#">Tìm kiếm</a></li>
-            <li><a href="GioiThieu.html">Giới thiệu</a></li>
-            <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h3>SẢN PHẨM</h3>
-          <ul>
-            <li><a href="#">Sản phẩm khuyến mãi</a></li>
-            <li><a href="#">Sản phẩm nổi bật</a></li>
-            <li><a href="#">Tất cả sản phẩm</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-logo">
-        <a href="TrangChu.html"><img src="images/logo.png" alt="Fast Bite Logo"></a>
-      
+    </main>
+    <footer class="site-footer">
+      <div class="container">
 
-      </div>
-      <div class="contact-stack">
-        <a href="#" class="round-btn"><i class="fa fa-phone"></i></a>
-        <a href="#" class="round-btn"><i class="fa fa-envelope"></i></a>
-        <a href="#" class="round-btn"><i class="fa fa-map-pin "></i></a>
-      </div>
+        <div class="footer-top">
+          <div class="newsletter-box">
+            <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Nhập email của bạn..." required>
+              <button type="button">Đăng ký</button>
+            </form>
+          </div>
 
-    </div>
-    <div class="footer-bottom">
-      <p>Copyright © 2026 Fast Bite. All rights reserved.</p>
-    </div>
- </div>
-</footer>
-</body>
+          <div class="social-box">
+            <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
+            <div class="social-icons">
+              <a href="#" title="Facebook"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a href="#" title="Instagram"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="#" title="YouTube"><i
+                  class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-main">
+
+          <div class="footer-links">
+            <div class="footer-col">
+              <h3>CHÍNH SÁCH</h3>
+              <ul>
+                <li><a href="#">Tìm kiếm</a></li>
+                <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h3>SẢN PHẨM</h3>
+              <ul>
+                <li><a href="#">Sản phẩm khuyến mãi</a></li>
+                <li><a href="#">Sản phẩm nổi bật</a></li>
+                <li><a href="#">Tất cả sản phẩm</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-logo">
+            <a href="TrangChu.html"><img src="images/logo.png"
+                alt="Fast Bite Logo"></a>
+
+          </div>
+          <div class="contact-stack">
+            <a href="#" class="round-btn"><i class="fa fa-phone"></i></a>
+            <a href="#" class="round-btn"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="round-btn"><i class="fa fa-map-pin "></i></a>
+          </div>
+
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright © 2026 Fast Bite. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
