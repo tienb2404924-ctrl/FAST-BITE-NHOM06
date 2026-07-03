@@ -154,11 +154,12 @@ ul {
   height: 90%;
   object-fit: cover;
 }
-
+/* 
+test */
 .sec4 {
   position: relative;
   min-height: 80vh; /* Chiều cao tối thiểu 80% màn hình */
-  background-image: url("images/group.png");
+  background-image: url("../images/group.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
