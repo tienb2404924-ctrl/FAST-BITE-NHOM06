@@ -248,7 +248,7 @@ test */
 .sec5 .content-text {
   width: 50%;
   padding: 20px;
-
+  text-align: justify;
 }
 /*Footer*/
 .site-footer {
