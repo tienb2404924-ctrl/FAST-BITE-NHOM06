@@ -1,230 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực Đơn</title>
-    <link rel="stylesheet" href="css/ThucDon.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thực Đơn</title>
+        <link rel="stylesheet" href="css/ThucDon.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<body>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <div class="logo">
-            <img src="images/logo.png" alt="Fast Bite Logo" />
-        </div>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="TrangChu.html">Trang Chủ</a></li>
-                <li><a href="GioiThieu.html">Giới Thiệu</a></li>
-                <li><a href="ThucDon.html" class="active">Thực Đơn</a></li>
-                <li><a href="HeThongCuaHang.html">Hệ Thống Cửa Hàng</a></li>
-                <li><a href="LienHe.html">Liên hệ</a></li>
-            </ul>
-        </nav>
-        <button class="btn-login"><span>&#128100;</span> Đăng nhập</button>
-    </header>
+    </head>
 
-    <main class="main">
-        <nav class="main__nav">
-            <a class="active" href="#Uu-dai">ƯU ĐÃI</a>
-            <a href="#Ga-gion">GÀ GIÒN</a>
-            <a href="#My-y">MỲ Ý</a>
-            <a href="#Burger">BURGER</a>
-            <a href="#Do-uong">ĐỒ UỐNG</a>
-        </nav>
-        <div class="div__items">
-            <section id="Uu-dai">
-                <h2>ƯU ĐÃI</h2>
-                <article>
-                    <img src="images/Dora.jpg" alt="COMBO 1">
-                    <h3>COMBO 1</h3>
-                    <p>Những gì có trong 1 combo</p>
-                    <p>2xx.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="Chắc Là Không Giòn Đâu">
-                    <h3>COMBO Chắc Là Không Giòn Đâu</h3>
-                    <p>Những gì có trong 1 combo</p>
-                    <p>1xx.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="Xì Xì Xà Xà">
-                    <h3>COMBO Khẩu Phật Tâm Hồn</h3>
-                    <p>Những gì có trong 1 combo</p>
-                    <p>2xx.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="Cãi Lộn Cát không">
-                    <h3>COMBO Cãi Lộn Cát Không</h3>
-                    <p>Những gì có trong 1 combo</p>
-                    <p>3xx.000đ</p>
-                </article>
-            </section>
-            <section id="Ga-gion">
-                <h2>GÀ GIÒN</h2>
-                <article>
-                    <img src="images/Dora.jpg" alt="2 miếng">
-                    <h3>2 miếng</h3>
-                    <p>2 miếng gà giòn + 2 bịt tương cà Jackllibee</p>
-                    <p>5x.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="4 miếng">
-                    <h3>4 miếng</h3>
-                    <p>4 miếng gà giòn + 4 bịt tương cà Jackllibee</p>
-                    <p>1xx.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="6 miếng">
-                    <h3>6 miếng</h3>
-                    <p>6 miếng gà giòn + 3 bịt tương ót Jackllibee + 6 bịt tương cà Jackllibee</p>
-                    <p>136.000đ</p>
-                </article>
-            </section>
-
-            <section id="My-y">
-                <h2>MỲ Ý</h2>
-                <article>
-                    <img src="images/Dora.jpg" alt="Mỳ Ý Sốt Cay">
-                    <h3>Mỳ Ý Sốt Cay</h3>
-                    <p>1 Mỳ Ý Sốt Cay</p>
-                    <p>3x.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="Mỳ Ý Sốt Cay + 1 Rau Má">
-                    <h3>Mỳ Ý Sốt Cay + Rau Má</h3>
-                    <p>1 Mỳ Ý Sốt Cay + 1 Rau Má</p>
-                    <p>4x.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="Ý Kiến Ý Cò">
-                    <h3>Ý Kiến Ý Cò</h3>
-                    <p>3 Mỳ Ý Sốt Cay + 6 Rau Má + 36 bịt tương ớt Jackllibee</p>
-                    <p>136.000đ</p>
-                </article>
-            </section>
-
-            <section id="Burger">
-                <h2>Burger</h2>
-                <article>
-                    <img src="images/Dora.jpg" alt="Burger Tôm">
-                    <h3>Burger Tôm</h3>
-                    <p>1 Burger Tôm + 1 Tương cà Jackllibee</p>
-                    <p>3x.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="Burger Bò">
-                    <h3>Burger Bò</h3>
-                    <p>1 Burger Bò + 1 Tương cà Jackllibee</p>
-                    <p>3x.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="Burger Gà">
-                    <h3>Burger Gà</h3>
-                    <p>1 Burger Gà + 1 Tương cà Jackllibee</p>
-                    <p>3x.000đ</p>
-                </article>
-            </section>
-
-            <section id="Do-uong">
-                <h2>ĐỒ UỐNG</h2>
-                <article>
-                    <img src="images/Dora.jpg" alt="Pepsi">
-                    <h3>Pepsi</h3>
-                    <p>1 Pepsi</p>
-                    <p>1x.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="7 Up">
-                    <h3>7 Up</h3>
-                    <p>1 7 UP</p>
-                    <p>1x.000đ</p>
-                </article>
-
-                <article>
-                    <img src="images/Dora.jpg" alt="Mirinda Cam">
-                    <h3>Mirinda Cam</h3>
-                    <p>1 Mirinda Cam</p>
-                    <p>1x.000đ</p>
-                </article>
-            </section>
-
-        </div>
-
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-
-            <div class="footer-top">
-                <div class="newsletter-box">
-                    <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Nhập email của bạn..." required>
-                        <button type="button">Đăng ký</button>
-                    </form>
-                </div>
-
-                <div class="social-box">
-                    <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
-                    <div class="social-icons">
-                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
+    <body>
+        <!-- ===== Header ===== -->
+        <header class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Fast Bite Logo" />
             </div>
-            <div class="footer-main">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="TrangChu.html">Trang Chủ</a></li>
+                    <li><a href="GioiThieu.html">Giới Thiệu</a></li>
+                    <li><a href="ThucDon.html" class="active">Thực Đơn</a></li>
+                    <li><a href="HeThongCuaHang.html">Hệ Thống Cửa Hàng</a></li>
+                    <li><a href="LienHe.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <button class="btn-login"><span>&#128100;</span> Đăng nhập</button>
+        </header>
 
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h3>CHÍNH SÁCH</h3>
-                        <ul>
-                            <li><a href="#">Tìm kiếm</a></li>
-                            <li><a href="GioiThieu.html">Giới thiệu</a></li>
-                            <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
-                        </ul>
-                    </div>
+        <main class="main">
+            <nav class="main__nav">
+                <a class="active" href="#Uu-dai">ƯU ĐÃI</a>
+                <a href="#Ga-gion">GÀ GIÒN</a>
+                <a href="#My-y">MỲ Ý</a>
+                <a href="#Burger">BURGER</a>
+                <a href="#Do-uong">ĐỒ UỐNG</a>
+            </nav>
+            <div class="div__items">
+                <section id="Uu-dai">
+                    <h2>ƯU ĐÃI</h2>
+                    <article>
+                        <img src="images/Dora.jpg" alt="COMBO 1">
+                        <h3>COMBO 1</h3>
+                        <p>Những gì có trong 1 combo</p>
+                        <p>2xx.000đ</p>
+                    </article>
 
-                    <div class="footer-col">
-                        <h3>SẢN PHẨM</h3>
-                        <ul>
-                            <li><a href="#">Sản phẩm khuyến mãi</a></li>
-                            <li><a href="#">Sản phẩm nổi bật</a></li>
-                            <li><a href="#">Tất cả sản phẩm</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-logo">
-                    <a href="TrangChu.html"><img src="images/logo.png" alt="Fast Bite Logo"></a>
+                    <article>
+                        <img src="images/Dora.jpg" alt="Chắc Là Không Giòn Đâu">
+                        <h3>COMBO Chắc Là Không Giòn Đâu</h3>
+                        <p>Những gì có trong 1 combo</p>
+                        <p>1xx.000đ</p>
+                    </article>
 
+                    <article>
+                        <img src="images/Dora.jpg" alt="Xì Xì Xà Xà">
+                        <h3>COMBO Khẩu Phật Tâm Hồn</h3>
+                        <p>Những gì có trong 1 combo</p>
+                        <p>2xx.000đ</p>
+                    </article>
 
-                </div>
-                <div class="contact-stack">
-                    <a href="#" class="round-btn"><i class="fa fa-phone"></i></a>
-                    <a href="#" class="round-btn"><i class="fa fa-envelope"></i></a>
-                    <a href="#" class="round-btn"><i class="fa fa-map-pin "></i></a>
-                </div>
+                    <article>
+                        <img src="images/Dora.jpg" alt="Cãi Lộn Cát không">
+                        <h3>COMBO Cãi Lộn Cát Không</h3>
+                        <p>Những gì có trong 1 combo</p>
+                        <p>3xx.000đ</p>
+                    </article>
+                </section>
+                <section id="Ga-gion">
+                    <h2>GÀ GIÒN</h2>
+                    <article>
+                        <img src="images/Dora.jpg" alt="2 miếng">
+                        <h3>2 miếng</h3>
+                        <p>2 miếng gà giòn + 2 bịt tương cà Jackllibee</p>
+                        <p>5x.000đ</p>
+                    </article>
+
+                    <article>
+                        <img src="images/Dora.jpg" alt="4 miếng">
+                        <h3>4 miếng</h3>
+                        <p>4 miếng gà giòn + 4 bịt tương cà Jackllibee</p>
+                        <p>1xx.000đ</p>
+                    </article>
+
+                    <article>
+                        <img src="images/Dora.jpg" alt="6 miếng">
+                        <h3>6 miếng</h3>
+                        <p>6 miếng gà giòn + 3 bịt tương ót Jackllibee + 6 bịt
+                            tương cà Jackllibee</p>
+                        <p>136.000đ</p>
+                    </article>
+                </section>
+
+                <section id="My-y">
+                    <h2>MỲ Ý</h2>
+                    <article>
+                        <img src="images/Dora.jpg" alt="Mỳ Ý Sốt Cay">
+                        <h3>Mỳ Ý Sốt Cay</h3>
+                        <p>1 Mỳ Ý Sốt Cay</p>
+                        <p>3x.000đ</p>
+                    </article>
+
+                    <article>
+                        <img src="images/Dora.jpg"
+                            alt="Mỳ Ý Sốt Cay + 1 Rau Má">
+                        <h3>Mỳ Ý Sốt Cay + Rau Má</h3>
+                        <p>1 Mỳ Ý Sốt Cay + 1 Rau Má</p>
+                        <p>4x.000đ</p>
+                    </article>
+
+                    <article>
+                        <img src="images/Dora.jpg" alt="Ý Kiến Ý Cò">
+                        <h3>Ý Kiến Ý Cò</h3>
+                        <p>3 Mỳ Ý Sốt Cay + 6 Rau Má + 36 bịt tương ớt
+                            Jackllibee</p>
+                        <p>136.000đ</p>
+                    </article>
+                </section>
+
+                <section id="Burger">
+                    <h2>Burger</h2>
+                    <article>
+                        <img src="images/Dora.jpg" alt="Burger Tôm">
+                        <h3>Burger Tôm</h3>
+                        <p>1 Burger Tôm + 1 Tương cà Jackllibee</p>
+                        <p>3x.000đ</p>
+                    </article>
+
+                    <article>
+                        <img src="images/Dora.jpg" alt="Burger Bò">
+                        <h3>Burger Bò</h3>
+                        <p>1 Burger Bò + 1 Tương cà Jackllibee</p>
+                        <p>3x.000đ</p>
+                    </article>
+
+                    <article>
+                        <img src="images/Dora.jpg" alt="Burger Gà">
+                        <h3>Burger Gà</h3>
+                        <p>1 Burger Gà + 1 Tương cà Jackllibee</p>
+                        <p>3x.000đ</p>
+                    </article>
+                </section>
+
+                <section id="Do-uong">
+                    <h2>ĐỒ UỐNG</h2>
+                    <article>
+                        <img src="images/Dora.jpg" alt="Pepsi">
+                        <h3>Pepsi</h3>
+                        <p>1 Pepsi</p>
+                        <p>1x.000đ</p>
+                    </article>
+
+                    <article>
+                        <img src="images/Dora.jpg" alt="7 Up">
+                        <h3>7 Up</h3>
+                        <p>1 7 UP</p>
+                        <p>1x.000đ</p>
+                    </article>
+
+                    <article>
+                        <img src="images/Dora.jpg" alt="Mirinda Cam">
+                        <h3>Mirinda Cam</h3>
+                        <p>1 Mirinda Cam</p>
+                        <p>1x.000đ</p>
+                    </article>
+                </section>
 
             </div>
-            <div class="footer-bottom">
-                <p>Copyright © 2026 Fast Bite. All rights reserved.</p>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+
+                <div class="footer-top">
+                    <div class="newsletter-box">
+                        <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
+                        <form class="newsletter-form">
+                            <input type="email"
+                                placeholder="Nhập email của bạn..." required>
+                            <button type="button">Đăng ký</button>
+                        </form>
+                    </div>
+
+                    <div class="social-box">
+                        <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="#" title="Instagram"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#" title="YouTube"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-main">
+
+                    <div class="footer-links">
+                        <div class="footer-col">
+                            <h3>CHÍNH SÁCH</h3>
+                            <ul>
+                                <li><a href="#">Tìm kiếm</a></li>
+                                <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                                <li><a href="HeThongCuaHang.html">Hệ thống cửa
+                                        hàng</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h3>SẢN PHẨM</h3>
+                            <ul>
+                                <li><a href="#">Sản phẩm khuyến mãi</a></li>
+                                <li><a href="#">Sản phẩm nổi bật</a></li>
+                                <li><a href="#">Tất cả sản phẩm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-logo">
+                        <a href="TrangChu.html"><img src="images/logo.png"
+                                alt="Fast Bite Logo"></a>
+
+                    </div>
+                    <div class="contact-stack">
+                        <a href="#" class="round-btn"><i
+                                class="fa fa-phone"></i></a>
+                        <a href="#" class="round-btn"><i
+                                class="fa fa-envelope"></i></a>
+                        <a href="#" class="round-btn"><i
+                                class="fa fa-map-pin "></i></a>
+                    </div>
+
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright © 2026 Fast Bite. All rights reserved.</p>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script>
+        </footer>
+        <script>
         document.addEventListener("DOMContentLoaded", function () {
             const navLinks = document.querySelectorAll(".main__nav a");
             const sections = document.querySelectorAll(".div__items section");
@@ -266,6 +280,6 @@
             });
         });
     </script>
-</body>
+    </body>
 
 </html>
