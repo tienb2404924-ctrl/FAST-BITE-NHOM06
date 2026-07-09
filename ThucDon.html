@@ -4,33 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thực Đơn</title>
+    <link rel="stylesheet" href="css/ThucDon.css">
 </head>
 
 <body>
-
-    <header>
-        <img src="images/Logo_Jollibee.png" alt="Logo Jollibee">
-        <div>
-            <nav>
-                <a href="TrangChu.html">Trang chủ</a>
-                <a href="ThucDon.html">Thực đơn</a>
-                <a href="HeThongCuaHang.html">Hệ thống cửa hàng</a>
-                <a href="GioiThieu.html">Giới thiệu</a>
-                <a href="LienHe.html">Liên hệ</a>
-            </nav>
+    <!-- ===== Header ===== -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Fast Bite Logo" />
         </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="TrangChu.html">Trang Chủ</a></li>
+                <li><a href="GioiThieu.html">Giới Thiệu</a></li>
+                <li><a href="ThucDon.html" class="active">Thực Đơn</a></li>
+                <li><a href="HeThongCuaHang.html">Hệ Thống Cửa Hàng</a></li>
+                <li><a href="LienHe.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <button class="btn-login"><span>&#128100;</span> Đăng nhập</button>
     </header>
 
-    <main>
-        <nav>
-            <a href="#Uu-dai">ƯU ĐÃI</a>
+    <main class="main">
+        <nav class="main__nav">
+            <a class="active" href="#Uu-dai">ƯU ĐÃI</a>
             <a href="#Ga-gion">GÀ GIÒN</a>
             <a href="#My-y">MỲ Ý</a>
             <a href="#Burger">BURGER</a>
             <a href="#Do-uong">ĐỒ UỐNG</a>
         </nav>
-        <div>
+        <div class="div__items">
             <section id="Uu-dai">
                 <h2>ƯU ĐÃI</h2>
                 <article>
@@ -61,7 +65,6 @@
                     <p>3xx.000đ</p>
                 </article>
             </section>
-
             <section id="Ga-gion">
                 <h2>GÀ GIÒN</h2>
                 <article>
@@ -162,10 +165,107 @@
 
     </main>
 
-    <footer>
+    <footer class="site-footer">
+        <div class="container">
 
+            <div class="footer-top">
+                <div class="newsletter-box">
+                    <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Nhập email của bạn..." required>
+                        <button type="button">Đăng ký</button>
+                    </form>
+                </div>
+
+                <div class="social-box">
+                    <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-main">
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h3>CHÍNH SÁCH</h3>
+                        <ul>
+                            <li><a href="#">Tìm kiếm</a></li>
+                            <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                            <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>SẢN PHẨM</h3>
+                        <ul>
+                            <li><a href="#">Sản phẩm khuyến mãi</a></li>
+                            <li><a href="#">Sản phẩm nổi bật</a></li>
+                            <li><a href="#">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-logo">
+                    <a href="TrangChu.html"><img src="images/logo.png" alt="Fast Bite Logo"></a>
+
+
+                </div>
+                <div class="contact-stack">
+                    <a href="#" class="round-btn"><i class="fa fa-phone"></i></a>
+                    <a href="#" class="round-btn"><i class="fa fa-envelope"></i></a>
+                    <a href="#" class="round-btn"><i class="fa fa-map-pin "></i></a>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2026 Fast Bite. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".main__nav a");
+            const sections = document.querySelectorAll(".div__items section");
 
+            // Hàm xử lý ẩn/hiện danh mục
+            function filterCategory(targetId) {
+                // 1. Duyệt qua từng section món ăn
+                sections.forEach(section => {
+                    if (section.getAttribute("id") === targetId) {
+                        section.classList.add("show"); // Hiện section được chọn
+                    } else {
+                        section.classList.remove("show"); // Ẩn các section còn lại
+                    }
+                });
+            }
+
+            // Vừa vào trang thì tự động hiển thị mục đầu tiên (Ưu đãi) dựa trên class active có sẵn
+            const defaultActive = document.querySelector(".main__nav a.active");
+            if (defaultActive) {
+                const targetId = defaultActive.getAttribute("href").replace("#", "");
+                filterCategory(targetId);
+            }
+
+            // Lắng nghe sự kiện click khi người dùng chọn danh mục
+            navLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault(); // Ngăn trang bị nhảy cuộn đột ngột
+
+                    // Xóa chữ active cũ, thêm active vào nút vừa bấm
+                    navLinks.forEach(item => item.classList.remove("active"));
+                    this.classList.add("active");
+
+                    // Lấy ID mục cần hiển thị (Ví dụ: #My-y -> My-y)
+                    const targetId = this.getAttribute("href").replace("#", "");
+
+                    // Gọi hàm kích hoạt ẩn hiện
+                    filterCategory(targetId);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
