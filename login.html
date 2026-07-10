@@ -4,29 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fast Bite - Auth</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-    <script src="AUTH.js" defer></script>
     <link rel="stylesheet" href="./css/login.css" />
   </head>
   <body>
     <h2>🍔 Fast Bite</h2>
 
     <div class="tabs">
-      <button id="tL" class="active" onclick="switchTab('login')">
-        Đăng nhập
-      </button>
-      <button id="tS" onclick="switchTab('signup')">Đăng ký</button>
+      <button id="tL" class="active">Đăng nhập</button>
+      <button id="tS">Đăng ký</button>
     </div>
 
-    <form id="authForm" onsubmit="handleSubmit(event)">
-      <input type="email" id="email" placeholder="Email" required />
-      <input
-        type="password"
-        id="pass"
-        placeholder="Mật khẩu"
-        required
-        minlength="6"
-      />
+    <form>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="pass" placeholder="Mật khẩu" />
       <input
         type="password"
         id="confirm"
@@ -34,7 +24,7 @@
         style="display: none"
       />
 
-      <button type="submit" id="btn">Đăng nhập</button>
+      <button type="button" id="btn">Đăng nhập</button>
       <div id="msg" class="msg"></div>
     </form>
 
