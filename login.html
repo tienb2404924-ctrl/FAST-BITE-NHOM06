@@ -9,29 +9,31 @@
   <body>
     <h2>🍔 Fast Bite</h2>
 
-    <div class="tabs">
-      <button id="tL" class="active">Đăng nhập</button>
-      <button id="tS">Đăng ký</button>
+    <div type class="tabs">
+      <button type="button" id="tL" class="active"
+        onclick="switchTab('login')">Đăng
+        nhập</button>
+      <button type="button" id="tS" onclick="switchTab('signup')">Đăng
+        ký</button>
     </div>
 
-    <form>
+    <form id="login-form">
       <input type="email" id="email" placeholder="Email" />
       <input type="password" id="pass" placeholder="Mật khẩu" />
       <input
         type="password"
         id="confirm"
         placeholder="Xác nhận mật khẩu"
-        style="display: none"
-      />
+        style="display: none" />
 
-      <button type="button" id="btn">Đăng nhập</button>
-      <div id="msg" class="msg"></div>
+      <button type="submit" id="btn">Đăng nhập</button>
+
     </form>
 
     <p>
-      <a href="TrangChu.html" style="color: #666; font-size: 13px"
-        >← Quay lại trang chủ</a
-      >
+      <a href="TrangChu.html" style="color: #666; font-size: 13px">← Quay lại
+        trang chủ</a>
     </p>
+    <script src="./js/auth.js"></script>
   </body>
 </html>
