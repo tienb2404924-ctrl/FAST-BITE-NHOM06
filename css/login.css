@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  
   max-width: 350px;
   margin: 50px auto;
   padding: 20px;
@@ -15,8 +15,7 @@ form {
   gap: 12px;
   text-align: left;
 }
-input,
-button {
+input,button {
   padding: 10px;
   font-size: 14px;
   width: 100%;
@@ -45,17 +44,4 @@ button:disabled {
   background: #f5821f;
   color: white;
 }
-.msg {
-  padding: 8px;
-  font-size: 13px;
-  display: none;
-  font-weight: bold;
-}
-.error {
-  display: block;
-  color: red;
-}
-.success {
-  display: block;
-  color: green;
-}
+

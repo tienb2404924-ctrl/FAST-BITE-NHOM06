@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon_io/favicon-32x32.png" type="image/x-icon" />
     <title>Fast Bite - Trang Chủ</title>
     <link rel="stylesheet" href="css/TrangChu.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
 
     <link
       rel="stylesheet"
@@ -12,15 +21,19 @@
     />
     <script src="AUTH.js" defer></script>
   </head>
+
   <body>
     <!-- ===== Header ===== -->
     <header class="header">
       <div class="logo">
         <img src="images/logo.png" alt="Fast Bite Logo" />
       </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <nav>
-        <ul class="nav-menu">
-          <li><a href="#" class="active">Trang Chủ</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="TrangChu.html" class="active">Trang Chủ</a></li>
           <li><a href="GioiThieu.html">Giới Thiệu</a></li>
           <li><a href="ThucDon.html">Thực Đơn</a></li>
           <li><a href="HeThongCuaHang.html">Hệ Thống Cửa Hàng</a></li>
@@ -35,7 +48,11 @@
         >
           <span>&#128100;</span> Đăng nhập
         </button>
-        <button class="btn-register" id="registerBtn" onclick="openRegisterModal()">
+        <button
+          class="btn-register"
+          id="registerBtn"
+          onclick="openRegisterModal()"
+        >
           <span>&#9997;</span> Đăng ký
         </button>
         <div
@@ -46,23 +63,7 @@
             id="userName"
             style="font-weight: 600; color: #2b2b2b; font-size: 14px"
           ></span>
-          <button
-            class="btn-logout"
-            onclick="handleLogout()"
-            style="
-              background: #e53935;
-              color: #fff;
-              padding: 8px 18px;
-              border: none;
-              border-radius: 20px;
-              font-weight: 600;
-              font-size: 13px;
-              cursor: pointer;
-              transition: background 0.2s;
-            "
-          >
-            Đăng xuất
-          </button>
+          <button id="btn_logout" class="btn-logout">Đăng xuất</button>
         </div>
       </div>
     </header>
@@ -71,7 +72,11 @@
     <section class="hero">
       <div class="container hero-content">
         <div class="hero-text">
-          <div class="hero-badge">🔥 Ngon - Nhanh - Tiện Lợi</div>
+          <div class="hero-badge">
+            <span class="material-symbols-outlined">
+              local_fire_department </span
+            >Ngon - Nhanh - Tiện Lợi
+          </div>
           <h1 class="hero-title">
             FAST FOOD
             <span class="highlight">NGON HẾT Ý!</span>
@@ -81,8 +86,21 @@
             chất lượng nhất.
           </p>
           <div class="hero-buttons">
-            <button class="btn-primary">XEM THỰC ĐƠN &rarr;</button>
-            <button class="btn-secondary">📍 TÌM CỬA HÀNG</button>
+            <a href="ThucDon.html" class="btn-primary"
+              >XEM THỰC ĐƠN
+              <span class="material-symbols-outlined">
+                arrow_forward_ios
+              </span></a
+            >
+            <a href="HeThongCuaHang.html" class="btn-secondary"
+              ><span
+                class="material-symbols-outlined"
+                style="color: hsl(9, 98%, 48%)"
+              >
+                location_on
+              </span>
+              TÌM CỬA HÀNG</a
+            >
           </div>
         </div>
         <div class="hero-image">
@@ -94,21 +112,27 @@
       <div class="container">
         <div class="features-bar">
           <div class="feature-item">
-            <div class="feature-icon orange">🍔</div>
+            <div class="feature-icon orange">
+              <span class="material-symbols-outlined"> lunch_dining </span>
+            </div>
             <div>
               <div class="feature-title orange">Thơm Ngon</div>
               <div class="feature-desc">Hương vị đậm đà, khó cưỡng.</div>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon yellow">⚡</div>
+            <div class="feature-icon yellow">
+              <span class="material-symbols-outlined">bolt</span>
+            </div>
             <div>
               <div class="feature-title yellow">Nhanh Chóng</div>
               <div class="feature-desc">Phục vụ nhanh, không phải đợi lâu.</div>
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon black">🏅</div>
+            <div class="feature-icon black">
+              <span class="material-symbols-outlined">award_star</span>
+            </div>
             <div>
               <div class="feature-title">Chất Lượng</div>
               <div class="feature-desc">
@@ -117,7 +141,14 @@
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon gray">🛵</div>
+            <div class="feature-icon gray">
+              <span
+                class="material-symbols-outlined"
+                style="color: hsl(39, 96%, 31%)"
+              >
+                moped_package
+              </span>
+            </div>
             <div>
               <div class="feature-title">Tiện Lợi</div>
               <div class="feature-desc">
@@ -126,7 +157,9 @@
             </div>
           </div>
           <div class="feature-item">
-            <div class="feature-icon green">😊</div>
+            <div class="feature-icon green">
+              <span class="material-symbols-outlined"> mood_heart </span>
+            </div>
             <div>
               <div class="feature-title">Hài Lòng</div>
               <div class="feature-desc">
@@ -149,55 +182,58 @@
               MÓN NGON <span class="highlight">NỔI BẬT</span>
             </h2>
           </div>
-          <button class="btn-view-all">XEM TẤT CẢ &rarr;</button>
+          <a href="ThucDon.html" class="btn-view-all">XEM TẤT CẢ &rarr;</a>
         </div>
 
         <div class="menu-grid">
-          <div class="menu-card">
-            <div class="menu-card-image">
-              <img src="images/m_burger.png" alt="Burger Bò Phô Mai" />
+          <div class="menu-gird-chill">
+            <div class="menu-card">
+              <a href="ThucDon.html" class="menu-card-image">
+                <img src="images/m_burger.png" alt="Burger Bò Phô Mai" />
+              </a>
+              <div class="menu-card-name">Burger Bò Phô Mai</div>
+              <div class="menu-card-rating">★★★★★</div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">49.000đ</span>
+                <button class="menu-card-add">+</button>
+              </div>
             </div>
-            <div class="menu-card-name">Burger Bò Phô Mai</div>
-            <div class="menu-card-rating">★★★★★</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">49.000đ</span>
-              <button class="menu-card-add">+</button>
+
+            <div class="menu-card">
+              <a href="ThucDon.html" class="menu-card-image">
+                <img src="images/m_chicken.png" alt="Gà Rán Giòn Cay" />
+              </a>
+              <div class="menu-card-name">Gà Rán Giòn Cay</div>
+              <div class="menu-card-rating">★★★★★</div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">39.000đ</span>
+                <button class="menu-card-add">+</button>
+              </div>
             </div>
           </div>
+          <div class="menu-gird-chill">
+            <div class="menu-card">
+              <a href="ThucDon.html" class="menu-card-image">
+                <img src="images/m_fries.png" alt="Khoai Tây Chiên" />
+              </a>
+              <div class="menu-card-name">Khoai Tây Chiên</div>
+              <div class="menu-card-rating">★★★★★</div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">25.000đ</span>
+                <button class="menu-card-add">+</button>
+              </div>
+            </div>
 
-          <div class="menu-card">
-            <div class="menu-card-image">
-              <img src="images/m_chicken.png" alt="Gà Rán Giòn Cay" />
-            </div>
-            <div class="menu-card-name">Gà Rán Giòn Cay</div>
-            <div class="menu-card-rating">★★★★★</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">39.000đ</span>
-              <button class="menu-card-add">+</button>
-            </div>
-          </div>
-
-          <div class="menu-card">
-            <div class="menu-card-image">
-              <img src="images/m_fries.png" alt="Khoai Tây Chiên" />
-            </div>
-            <div class="menu-card-name">Khoai Tây Chiên</div>
-            <div class="menu-card-rating">★★★★★</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">25.000đ</span>
-              <button class="menu-card-add">+</button>
-            </div>
-          </div>
-
-          <div class="menu-card">
-            <div class="menu-card-image">
-              <img src="images/m_drink.png" alt="Nước Ngọt" />
-            </div>
-            <div class="menu-card-name">Nước Ngọt</div>
-            <div class="menu-card-rating">★★★★★</div>
-            <div class="menu-card-footer">
-              <span class="menu-card-price">15.000đ</span>
-              <button class="menu-card-add">+</button>
+            <div class="menu-card">
+              <a href="ThucDon.html" class="menu-card-image">
+                <img src="images/m_drink.png" alt="Nước Ngọt" />
+              </a>
+              <div class="menu-card-name">Nước Ngọt</div>
+              <div class="menu-card-rating">★★★★★</div>
+              <div class="menu-card-footer">
+                <span class="menu-card-price">15.000đ</span>
+                <button class="menu-card-add">+</button>
+              </div>
             </div>
           </div>
         </div>
@@ -207,7 +243,8 @@
       <div class="container">
         <div class="footer-top">
           <div class="newsletter-box">
-            <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
+            <span class="material-symbols-outlined"> mail </span>
+            <span class="box-label"> ĐĂNG KÝ NHẬN TIN:</span>
             <form class="newsletter-form">
               <input
                 type="email"
@@ -238,7 +275,7 @@
             <div class="footer-col">
               <h3>CHÍNH SÁCH</h3>
               <ul>
-                <li><a href="#">Tìm kiếm</a></li>
+                <li><a href="HeThongCuaHang.html">Tìm kiếm</a></li>
                 <li><a href="GioiThieu.html">Giới thiệu</a></li>
                 <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
               </ul>
@@ -249,7 +286,7 @@
               <ul>
                 <li><a href="#">Sản phẩm khuyến mãi</a></li>
                 <li><a href="#">Sản phẩm nổi bật</a></li>
-                <li><a href="#">Tất cả sản phẩm</a></li>
+                <li><a href="ThucDon.html">Tất cả sản phẩm</a></li>
               </ul>
             </div>
           </div>
@@ -259,9 +296,15 @@
             /></a>
           </div>
           <div class="contact-stack">
-            <a href="#" class="round-btn"><i class="fa fa-phone"></i></a>
-            <a href="#" class="round-btn"><i class="fa fa-envelope"></i></a>
-            <a href="#" class="round-btn"><i class="fa fa-map-pin"></i></a>
+            <a href="LienHe.html" class="round-btn"
+              ><i class="fa fa-phone"></i
+            ></a>
+            <a href="LienHe.html" class="round-btn"
+              ><i class="fa fa-envelope"></i
+            ></a>
+            <a href="HeThongCuaHang.html" class="round-btn"
+              ><i class="fa fa-map-pin"></i
+            ></a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -274,16 +317,16 @@
     <div id="toast" class="toast" style="display: none">
       <span id="toastIcon" class="toast-icon"></span>
       <span id="toastMessage" class="toast-message"></span>
-      <button class="toast-close" onclick="hideToast()">&times;</button>
+      <button class="toast-close" id="toast_close">&times;</button>
     </div>
 
     <!-- ===== Register Modal ===== -->
     <div id="registerModal" class="modal-overlay" style="display: none">
       <div class="modal-content">
-        <button class="modal-close" onclick="closeRegisterModal()">&times;</button>
+        <button class="modal-close" id="modal_close">&times;</button>
         <h2 class="modal-title">Tạo tài khoản</h2>
         <p class="modal-subtitle">Đăng ký để nhận ưu đãi đặc biệt!</p>
-        <form id="registerForm" onsubmit="handleRegister(event)">
+        <form id="registerForm">
           <input
             type="email"
             id="regEmail"
@@ -308,155 +351,11 @@
         </form>
         <p class="modal-footer-text">
           Đã có tài khoản?
-          <a href="login.html" onclick="closeRegisterModal()">Đăng nhập</a>
+          <a href="login.html" id="login">Đăng nhập</a>
         </p>
       </div>
     </div>
 
-    <script>
-      // Check auth state on page load & show user name / logout
-      async function checkAuth() {
-        const { data } = await getSession();
-        const loginBtn = document.getElementById("loginBtn");
-        const registerBtn = document.getElementById("registerBtn");
-        const userMenu = document.getElementById("userMenu");
-        const userName = document.getElementById("userName");
-
-        if (data?.session?.user) {
-          loginBtn.style.display = "none";
-          registerBtn.style.display = "none";
-          userMenu.style.display = "inline-flex";
-          userName.textContent = data.session.user.email;
-        } else {
-          loginBtn.style.display = "inline-flex";
-          registerBtn.style.display = "inline-flex";
-          userMenu.style.display = "none";
-        }
-      }
-
-      async function handleLogout() {
-        localStorage.setItem(
-          "fastbite_toast",
-          JSON.stringify({ message: "Đã đăng xuất!", type: "info" })
-        );
-        await signOut();
-        window.location.reload();
-      }
-
-      // Modal controls
-      function openRegisterModal() {
-        document.getElementById("registerModal").style.display = "flex";
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeRegisterModal() {
-        document.getElementById("registerModal").style.display = "none";
-        document.body.style.overflow = "";
-      }
-
-      // Handle registration with auto-login
-      async function handleRegister(e) {
-        e.preventDefault();
-        const email = document.getElementById("regEmail").value.trim();
-        const pass = document.getElementById("regPass").value;
-        const confirm = document.getElementById("regConfirm").value;
-        const btn = document.getElementById("regBtn");
-        const msg = document.getElementById("regMsg");
-
-        if (pass !== confirm) {
-          msg.className = "msg error";
-          msg.textContent = "Mật khẩu không khớp!";
-          return;
-        }
-
-        btn.disabled = true;
-        btn.textContent = "Đang xử lý...";
-        msg.className = "msg";
-
-        // Sign up then auto-login
-        const { error: signUpError } = await signUp(email, pass);
-
-        if (signUpError) {
-          btn.disabled = false;
-          btn.textContent = "Đăng ký";
-          msg.className = "msg error";
-          msg.textContent = signUpError.message;
-          return;
-        }
-
-        const { error: signInError } = await signIn(email, pass);
-
-        btn.disabled = false;
-        btn.textContent = "Đăng ký";
-
-        if (signInError) {
-          msg.className = "msg error";
-          msg.textContent = signInError.message;
-        } else {
-          msg.className = "msg success";
-          msg.textContent = "Đăng ký thành công! Đang chuyển hướng...";
-          localStorage.setItem(
-            "fastbite_toast",
-            JSON.stringify({ message: "Đăng ký thành công!", type: "success" })
-          );
-          setTimeout(() => {
-            closeRegisterModal();
-            window.location.reload();
-          }, 1000);
-        }
-      }
-
-      // Toast notification
-      function showToast(message, type) {
-        const toast = document.getElementById("toast");
-        const icon = document.getElementById("toastIcon");
-        const msgEl = document.getElementById("toastMessage");
-
-        toast.className = "toast toast-" + type;
-        msgEl.textContent = message;
-
-        const icons = {
-          success: "✓",
-          info: "ℹ",
-          error: "✕",
-        };
-        icon.textContent = icons[type] || icons.info;
-
-        toast.style.display = "flex";
-        // Trigger reflow for animation
-        void toast.offsetWidth;
-        toast.classList.add("toast-visible");
-
-        setTimeout(hideToast, 3500);
-      }
-
-      function hideToast() {
-        const toast = document.getElementById("toast");
-        toast.classList.remove("toast-visible");
-        setTimeout(() => {
-          toast.style.display = "none";
-        }, 300);
-      }
-
-      // On page load: check auth + set up modal overlay + show pending toast
-      document.addEventListener("DOMContentLoaded", function () {
-        checkAuth();
-        const modal = document.getElementById("registerModal");
-        if (modal) {
-          modal.addEventListener("click", function (e) {
-            if (e.target === modal) closeRegisterModal();
-          });
-        }
-        // Show pending toast from localStorage (set before page reload/nav)
-        try {
-          const raw = localStorage.getItem("fastbite_toast");
-          if (raw) {
-            const toast = JSON.parse(raw);
-            localStorage.removeItem("fastbite_toast");
-            setTimeout(() => showToast(toast.message, toast.type), 300);
-          }
-        } catch {}
-      });
-    </script>
+    <script src="trangchu.js"></script>
   </body>
 </html>

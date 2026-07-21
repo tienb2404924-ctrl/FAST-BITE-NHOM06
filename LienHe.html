@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast Bite - Liên Hệ</title>
-    <link rel="stylesheet" href="LienHe.css">
+    <link rel="stylesheet" href="css/LienHe.css">
 
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -27,62 +27,78 @@
       <button class="btn-login"><span>👤</span> Đăng nhập</button>
     </header>
 
-    <main class="main-contact container">
+    <main class="main-contact">
+      <div class="container">
 
-      <div class="contact-wrapper">
+        <div class="contact-wrapper">
 
-        <div class="contact-left-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8701525905594!2d105.7703799!3d10.0275724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883b54d5d889%3A0x7d757ddb0677d957!2sOmega%203%20th%C3%A1ng%202!5e0!3m2!1svi!2s!4v1782748958416!5m2!1svi!2s"
-            style="border:0;" allowfullscreen loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"></iframe> </div>
-
-        <div class="contact-right-content">
-
-          <div class="contact-info">
-            <h2>Liên hệ</h2>
-            <div class="info-item">
-              <p class="info-label">Địa chỉ của chúng tôi</p>
-              <p><strong>144b Đường 3 tháng 2, Phường Xuân Khánh, Quận Ninh
-                  Kiều, TP Cần Thơ</strong></p>
-            </div>
-            <div class="info-item">
-              <p class="info-label">Email chúng tôi</p>
-              <p><strong>fastbite@fastfood.vn</strong></p>
-            </div>
-            <div class="info-item">
-              <p class="info-label">Điện thoại</p>
-              <p><strong>1900 55 88 50</strong></p>
-            </div>
-            <div class="info-item">
-              <p class="info-label">Thời gian làm việc</p>
-              <p><strong>Thứ 2 đến Thứ 6 từ 9h đến 16h30</strong></p>
-            </div>
+          <div class="contact-left-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8701525905594!2d105.7703799!3d10.0275724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883b54d5d889%3A0x7d757ddb0677d957!2sOmega%203%20th%C3%A1ng%202!5e0!3m2!1svi!2s!4v1782748958416!5m2!1svi!2s"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
           </div>
 
-          <div class="contact-form">
-            <h2>Gửi thắc mắc cho chúng tôi</h2>
-            <form>
-              <input type="text" class="form-input" placeholder="Tên của bạn"
-                required>
+          <div class="contact-right-content">
 
-              <div class="form-row">
-                <input type="email" class="form-input"
-                  placeholder="Email của bạn" required>
-                <input type="tel" class="form-input"
-                  placeholder="Số điện thoại của bạn" required>
+            <div class="contact-info">
+              <h2>Liên hệ</h2>
+
+              <div class="info-item">
+                <p class="info-label">Địa chỉ của chúng tôi</p>
+                <p><strong>144b Đường 3 tháng 2, Phường Xuân Khánh, Quận Ninh
+                    Kiều, TP Cần Thơ</strong></p>
               </div>
 
-              <textarea class="form-input" rows="5" placeholder="Nội dung"
-                required
-                style="resize: vertical; min-height: 120px;"></textarea>
+              <div class="info-item">
+                <p class="info-label">Email chúng tôi</p>
+                <p><strong>fastbite@fastfood.vn</strong></p>
+              </div>
 
-              <button type="submit" class="btn-submit">GỬI CHO CHÚNG
-                TÔI</button>
-            </form>
+              <div class="info-item">
+                <p class="info-label">Điện thoại</p>
+                <p><strong>1900 55 88 50</strong></p>
+              </div>
+
+              <div class="info-item">
+                <p class="info-label">Thời gian làm việc</p>
+                <p><strong>Thứ 2 đến Thứ 6 từ 9h đến 16h30</strong></p>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h2>Gửi thắc mắc cho chúng tôi</h2>
+
+              <form>
+                <input type="text" class="form-input" placeholder="Tên của bạn"
+                  required>
+
+                <div class="form-row">
+                  <input type="email" class="form-input"
+                    placeholder="Email của bạn" required>
+                  <input type="tel" class="form-input"
+                    placeholder="Số điện thoại của bạn" required>
+                </div>
+
+                <textarea class="form-input" rows="5" placeholder="Nội dung"
+                  required></textarea>
+
+                <button type="submit" class="btn-submit">
+                  GỬI CHO CHÚNG TÔI
+                </button>
+              </form>
+
+            </div>
+
           </div>
+
         </div>
-      </div>
+
+      </div> <!-- Đóng container -->
+
     </main>
 
     <footer class="site-footer">
