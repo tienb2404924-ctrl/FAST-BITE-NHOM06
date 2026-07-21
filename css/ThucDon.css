@@ -143,6 +143,15 @@ ul {
 .icon-cart {
   font-size: 2.5rem;
   color: #4caf50;
+  border-radius: 9px;
+}
+
+
+
+.icon-cart:active {
+  transform: scale(1.2);
+  box-shadow: 2px 4px -6px gray;
+  color: #4caf4f92;
 }
 
 .no-ordered-items:hover {
