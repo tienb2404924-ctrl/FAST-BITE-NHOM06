@@ -35,7 +35,11 @@ ul {
   margin: 0 auto;
   padding: 0 24px;
 }
-/* ===== Header ===== */
+
+/****************************************************/
+/*                  CSS HEADER                      */
+/****************************************************/
+
 .header {
   display: flex;
   align-items: center;
@@ -104,14 +108,70 @@ ul {
   background-color: #43a047;
 }
 
+.mini-nav{
+  flex: 0 0 350px;
+  display: flex;
+  font-size: 1rem;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.shopping-cart{
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-right: 20px;
+  position: relative;
+}
+
+.mini-nav a{
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.no-ordered-items {
+   position: absolute;
+   top: -7px;
+   right: -12px;
+   color: #4caf50;
+   font-size: 0.65rem;
+   font-weight: bold;
+   padding: 3px;
+   border-radius: 50%;
+   border: 1px solid #4caf50;
+}
+
+.icon-cart {
+  font-size: 2.5rem;
+  color: #4caf50;
+}
+
+.no-ordered-items:hover {
+  background-color: green;
+  color: yellow;
+  font-weight: bold;
+}
 /* ==========================================================================
    CSS MAIN NAVIGATION & FOOD LAYOUT 
    ========================================================================== */
+
+/*Background cho phần main*/
+
+main {
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
 .main {
-    max-width: 1200px;        
+    width: 1300px;
+    max-width: 100%;        
     margin: 0 auto;           
     padding: 20px;
 }
+
+
 
 .main__nav {
     background-color: #FFB347; 
@@ -122,8 +182,12 @@ ul {
     justify-content: center;   
     gap: 20px;                 
     width: fit-content;        
-    margin: 30px auto 50px auto; 
+    margin: 30px auto 50px auto;
+    position: sticky;
+    top: 30px;
+    z-index: 99;
 }
+
 
 .main__nav a {
     color: #FFF8F4;             
@@ -131,38 +195,51 @@ ul {
     font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;        
-    border-radius: 20px;       
+    border-radius: 19px;   
     display: inline-block;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
 }
 
-.main__nav a:hover, 
+.main__nav a:hover{
+    color: white !important;
+    background-color: #FFB347 !important;
+    transform: scale(1.1);
+
+    /*Neumorphism*/
+
+    box-shadow: 6px 4px 12px #D47A13,
+     -6px -4px 12px #FFE6A3;
+}
 .main__nav a.active {
-    color: #FF4E1A !important;
+    color: white !important;
     background-color: rgba(255, 78, 26, 0.15) !important;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(255, 78, 26, 0.2);
+
+    /*Neumorphism*/
+
+    box-shadow:  inset -3px -3px 8px #FFE6A3, 
+        inset 3px 3px 8px #D66B00;
 }
 
-.div__items {
+.div__sanpham {
     display: flex;
     flex-direction: column;    
     gap: 60px;                 
 }
 
-.div__items section {
+.div__sanpham section {
     width: 100%;
     display: none !important; 
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 30px;                 
-    scroll-margin-top: 100px;
+    scroll-margin-top: 10px;
 }
 
-.div__items section.show {
+.div__sanpham section.show {
     display: grid !important; 
 }
 
-.div__items section h2 {
+.div__sanpham section h2 {
     grid-column: 1 / -1;       
     color: #1A1A1A;
     font-size: 24px;
@@ -174,7 +251,7 @@ ul {
     width: fit-content;        
 }
 
-.div__items article {
+.div__sanpham article {
     background-color: #ffffff; 
     border: 1px solid #f0f0f0;
     border-radius: 16px;       
@@ -185,12 +262,12 @@ ul {
                 box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.div__items article:hover {
+.div__sanpham article:hover {
     transform: scale(1.06) translateY(-10px); 
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
-.div__items article img {
+.div__sanpham article img {
     width: 100%;               
     max-width: 200px;          
     height: auto;
@@ -199,7 +276,7 @@ ul {
     display: block;
 }
 
-.div__items article h3 {
+.div__sanpham article h3 {
     color: #1A1A1A;
     font-size: 18px;
     font-weight: bold;
@@ -207,16 +284,40 @@ ul {
     min-height: 44px;          
 }
 
-.div__items article p:nth-of-type(1) {
+.div__sanpham article p:nth-of-type(1) {
     color: #555555;            
     font-size: 14px;
     margin-bottom: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
 }
 
-.div__items article p:nth-of-type(2) {
+.div__sanpham article p:nth-of-type(2) {
     color: #FF4E1A;            
     font-size: 20px;
     font-weight: 800;
+}
+
+.btn-add-cart {
+    margin-top: 8px;        
+    width: 100%;
+    background-color: orange; 
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 12px;     
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+} 
+
+.btn-add-cart:active {
+    transform: scale(0.98); 
+    background-color: #cc7a00;
 }
 
 
@@ -226,7 +327,225 @@ ul {
   margin: 0 auto;
   padding: 0 24px;
 }
-/*Footer*/
+
+/* Responsive Tablet */
+
+@media (max-width: 1200px) and (min-width: 736px) {
+  .header {
+    padding: 12px 16px;
+    gap: 14px;
+  }
+ 
+  .logo img {
+    height: 40px;
+  }
+  nav {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+ 
+  .nav-menu {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 20px;
+  }
+ 
+  .nav-menu li:not(:last-child) {
+    margin-right: 20px;
+  }
+ 
+  .nav-menu li a {
+    font-size: 14px;
+  }
+ 
+  .btn-login {
+    font-size: 13px;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+  main {
+    background-attachment: scroll;
+  }
+ 
+  .main {
+    padding: 12px;
+  }
+  .main__nav {
+    width: 100%;
+    max-width: fit-content;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 8px 16px;
+    gap: 10px;
+    margin: 20px auto 30px auto;
+  }
+ 
+  .main__nav a {
+    font-size: 14px;
+    padding: 8px 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .div__sanpham {
+    gap: 40px;
+  }
+ 
+  .div__sanpham section {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+ 
+  .div__sanpham section h2 {
+    font-size: 20px;
+  }
+ 
+  .div__sanpham article {
+    padding: 18px;
+  }
+ 
+  .div__sanpham article img {
+    max-width: 160px;
+  }
+}
+
+/* Responsive Mobile */
+
+@media (max-width: 736px) and (min-width: 300px) {
+  .header {
+    padding: 10px;
+    gap: 10px;
+  }
+ 
+  .logo img {
+    height: 34px;
+  }
+  nav {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+ 
+  .nav-menu {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 10px;
+  }
+ 
+  .nav-menu li:not(:last-child) {
+    margin-right: 10px;
+  }
+ 
+  .nav-menu li a {
+    font-size: 12px;
+  }
+ 
+  .btn-login {
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+ 
+  .btn-login span {
+    font-size: 14px;
+  }
+ 
+  .main__nav {
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 10px;
+    border-radius: 20px;
+    margin: 16px auto 24px auto;
+  }
+ 
+  .main__nav a {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .div__sanpham section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+ 
+  .div__sanpham article {
+    padding: 16px;
+  }
+ 
+  .div__sanpham article img {
+    max-width: 140px;
+  }
+ 
+  .div__sanpham article h3 {
+    font-size: 16px;
+    min-height: auto;
+  }
+}
+
+/* Khi chiều ngang dưới 900px thì nav__header sẽ có flex-direction là cột và canh giữa */
+
+@media (max-width: 900px) {
+ 
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 14px;
+  }
+  .logo {
+    justify-content: center;
+  }
+ 
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .nav-menu {
+    justify-content: center;
+  }
+ 
+  .btn-login {
+    justify-content: center;
+  }
+}
+
+/* Khi dưới chiều ngang dưới 400px thì đổi chiều rộng từ fit-content sang 100% để tránh bị mất chữ và 
+justify-content chuyển thành flex-start*/
+
+@media (max-width: 400px) {
+ 
+  .main__nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 6px 8px;
+    border-width: 2px;
+  }
+ 
+  .main__nav a {
+    font-size: 11px;
+    padding: 6px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+
+/****************************************************/
+/*                  CSS FOOTER                      */
+/****************************************************/
+
 .site-footer {
   background-color: #fff;
   border-top: 2px solid #fdf6ec;
@@ -442,12 +761,4 @@ ul {
   .footer-logo img{
     width: 150px;
   }
-}
-
-main {
-    background-image: url('/images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
 }
