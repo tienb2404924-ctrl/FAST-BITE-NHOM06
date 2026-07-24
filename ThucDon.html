@@ -15,15 +15,11 @@
         <div class="logo">
             <img src="images/logo.png" alt="Fast Bite Logo" />
         </div>
-
-        <button class="nav-toggle" id="navToggle">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở menu">
+            <i class="fa-solid fa-bars"></i>
         </button>
-
         <nav>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="TrangChu.html">Trang Chủ</a></li>
                 <li><a href="GioiThieu.html">Giới Thiệu</a></li>
                 <li><a href="ThucDon.html" class="active">Thực Đơn</a></li>
@@ -31,13 +27,13 @@
                 <li><a href="LienHe.html">Liên hệ</a></li>
             </ul>
         </nav>
-        <nav class="mini-nav">
-            <div class=" shopping-cart">
-            <p class="no-ordered-items">0</p>
-            <i class="icon-cart fa fa-shopping-cart"></i>
+        <button class="btn-login" onclick="window.location.href = 'login.html'">
+            <div class="shopping-cart" onclick="event.stopPropagation()">
+                <p class="no-ordered-items">0</p>
+                <i class="icon-cart fa fa-shopping-cart"></i>
             </div>
-            <button class="btn-login"><span>&#128100;</span> Đăng nhập</button>
-        </nav>
+            <span>&#128100;</span> Đăng nhập
+        </button>
     </header>
 
     <main class="main">

@@ -93,12 +93,96 @@ ul {
   font-size: 14px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .btn-login:hover {
   background-color: #43a047;
+  transform: translateY(-2px);
 }
+
+/* Nút Hamburger (Mặc định ẩn trên máy tính) */
+.mobile-menu-btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background-color: #fff3e6;
+  color: #f5821f;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-btn:hover {
+  background-color: #f5821f;
+  color: #fff;
+}
+/* ===== Responsive: 1024px - Hamburger menu appears ===== */
+@media (max-width: 1024px) {
+  .header {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .nav-menu li a:hover {
+    color: #2e138f;
+    background-color: #f5821f;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    order: 1;
+    margin-left: auto;
+    margin-right: 16px;
+  }
+
+  .btn-login {
+    order: 2;
+  }
+
+  .btn-login span {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #eee;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid #f9f9f9;
+  }
+
+  .nav-menu li a {
+    display: block;
+    padding: 16px 24px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
 /* main */
 main {
     max-width: 1200px;
