@@ -2,14 +2,21 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="/favicon_io/png" sizes="32x32"
+      href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="/favicon_io/png" sizes="16x16"
+      href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/HeThongCuaHang.css">
+    <script src="js/trangchu.js"></script>
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Hệ Thống Cửa Hàng</title>
   </head>
   <body>
     <!-- ===== Header ===== -->
-    <header class="header">
+     <header class="header">
       <div class="logo">
         <img src="images/logo.png" alt="Fast Bite Logo" />
       </div>
@@ -29,6 +36,7 @@
         <span>&#128100;</span> Đăng nhập
       </button>
     </header>
+
     <main>
       <div class="page-name">
         <h1>Hệ Thống Cửa Hàng</h1>
@@ -39,36 +47,47 @@
           <h2>Tìm cửa hàng</h2>
           <div class="form">
             <form>
-              <label for="province">Chọn tỉnh thành:</label>
+              <label for="province">Tỉnh thành:</label>
               <select id="province">
                 <option value="can-tho">Cần Thơ</option>
+                <option value="hcm">TP.Hồ Chí Minh</option>
+                <option value="an-giang">An Giang</option>
+                <option value="vinh-long">Vĩnh Long</option>
+                <option value="soc-trang">Sóc Trăng</option>
               </select>
 
-              <label for="district">Chọn quận - huyện:</label>
+              <label for="district">Quận - huyện:</label>
               <select id="district">
-                <option value="ninh-kieu">Ninh Kiều</option>
-                <option value="o-mon">Ô Môn</option>
-                <option value="thot-not">Thốt Nốt</option>
-                <option value="co-do">Cờ Đỏ</option>
+                <option value="ninh-kieu" data-province="can-tho">Ninh Kiều</option>
+                <option value="o-mon" data-province="can-tho">Ô Môn</option>
+                <option value="thot-not" data-province="can-tho">Thốt Nốt</option>
+                <option value="co-do" data-province="can-tho">Cờ Đỏ</option>
+                <option value="quan-10" data-province="hcm">Quận 10</option>
+                <option value="tan-binh" data-province="hcm">Tân Bình</option>
+                <option value="long-xuyen" data-province="an-giang">Long Xuyên</option>
+                <option value="tp-vinhlong" data-province="vinh-long">Thành phố Vĩnh Long</option>
+                <option value="binh-minh" data-province="vinh-long">Bình Minh</option>
+                <option value="tp-soctrang" data-province="soc-trang">Thành Phố Sóc Trăng</option>
+                <option value="my-xuyen" data-province="soc-trang">Mỹ Xuyên</option>
               </select>
             </form>
           </div>
 
           <div class="store-list">
-            <div class="store-item">
-              <h3>Jolibee 3/2</h3>
+            <div class="store-item" data-province="can-tho" data-district="ninh-kieu">
+              <h3>FASTBITE 3/2</h3>
               <p><i class="fa-solid fa-location-dot"></i> 144b 3 tháng 2, Xuân
                 Khánh, Ninh Kiều, Cần Thơ</p>
               <p><i class="fa-regular fa-clock"></i>
-                <strong>9h30-2h</strong></p>
+                <strong>9h30-22h</strong></p>
               <p><i class="fa-solid fa-phone"></i>
                 <strong>1900558850</strong></p>
               <a
                 href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7857.740305421697!2d105.76780497479406!3d10.027572390079312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883b54d5d889%3A0x7d757ddb0677d957!2sOmega%203%20th%C3%A1ng%202!5e0!3m2!1svi!2s!4v1781351540368!5m2!1svi!2s"
                 target="khung-map" class="btn-map">Xem bản đồ</a>
             </div>
-            <div class="store-item">
-              <h3>Jolibee Ngô Quyền</h3>
+            <div class="store-item" data-province="can-tho" data-district="ninh-kieu">
+              <h3>FASTBITE Ngô Quyền</h3>
               <p><i class="fa-solid fa-location-dot"></i> 65 Ngô Quyền, An Cư,
                 Ninh Kiều, Cần Thơ</p>
               <p><i class="fa-regular fa-clock"></i>
@@ -79,12 +98,134 @@
                 href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.777019918857!2d105.78209447479404!3d10.035250490071935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a08901afbb32e1%3A0x28b2f0ba57b219fc!2zT21lZ2EgTmfDtCBRdXnhu4Fu!5e0!3m2!1svi!2s!4v1781352317493!5m2!1svi!2"
                 target="khung-map" class="btn-map">Xem bản đồ</a>
             </div>
+             <div class="store-item" data-province="can-tho" data-district="o-mon">
+              <h3>FASTBITE Ô Môn</h3>
+              <p><i class="fa-solid fa-location-dot"></i> 40 Đ. Bến Bạch Đằng, Ô Môn, Cần Thơ</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900224422</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1167.7466007189068!2d105.61906642747401!3d10.114165215254534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a084e7bd0cca07%3A0x765fc63799e0b0d8!2zNDAgxJAuIELhur9uIELhuqFjaCDEkOG6sW5nLCDDlCBNw7RuLCBD4bqnbiBUaMahLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1784953253932!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="can-tho" data-district="thot-not">
+              <h3>FASTBITE Thốt Nốt</h3>
+              <p><i class="fa-solid fa-location-dot"></i> 15 Lương Thế Vinh, Thốt Nốt, Cần Thơ</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>10h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900667766</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1962.9043718766086!2d105.52546701583758!3d10.27698888011726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a765db77a3d43%3A0x97d92683f6915bbb!2zMTUgTMawxqFuZyBUaOG6vyBWaW5oLCBUaOG7kXQgTuG7kXQsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1784954946611!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="can-tho" data-district="co-do">
+              <h3>FASTBITE Cờ Đỏ</h3>
+              <p><i class="fa-solid fa-location-dot"></i>ĐT921, Cờ Đỏ, Cần Thơ</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>10h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900234567</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.50419089703612!2d105.42925158350019!3d10.093591822428055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0986aba026a39%3A0xd5c3cf2b97d33dc8!2zM0NWSCtGTVcsIMSQVDkyMSwgQ-G7nSDEkOG7jywgQ-G6p24gVGjGoSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1784955798356!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="hcm" data-district="quan-10">
+              <h3>FASTBITE Quận 10</h3>
+              <p><i class="fa-solid fa-location-dot"></i>285 Hẻm 285 Cách Mạng Tháng Tám, Hòa Hưng, Hồ Chí Minh</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900222222</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.9646171718414!2d106.67841343875254!3d10.778043741287872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f27c86e0303%3A0x3bca018423d13861!2zMjg1IEjhurttIDI4NSBDw6FjaCBN4bqhbmcgVGjDoW5nIFTDoW0sIEjDsmEgSMawbmcsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1784956933745!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="hcm" data-district="quan-10">
+              <h3>FASTBITE 3/2</h3>
+              <p><i class="fa-solid fa-location-dot"></i>18B/1A 3 Tháng 2, Hòa Hưng, Hồ Chí Minh</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900454545</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.9703706514028!2d106.67242077479933!3d10.770972299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ede50186f71%3A0x495ff13c3eed9683!2zMThCLzFBIDMgVGjCuG5nIDIsIEjDsmEgSMawbmcsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1784957131695!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="hcm" data-district="tan-binh">
+              <h3>FASTBITE Tân Bình</h3>
+              <p><i class="fa-solid fa-location-dot"></i>52 Ba Vân, Tân Bình, Hồ Chí Minh</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900333333</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.8018554503311!2d106.6407519695527!3d10.79541969933467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294d8391d969%3A0xdf2cc1ffa425a808!2zNTIgQmEgVsOibiwgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1784957483114!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="an-giang" data-district="long-xuyen">
+              <h3>FASTBITE Long Xuyên</h3>
+              <p><i class="fa-solid fa-location-dot"></i>11 Đ. Phạm Ngọc Thạch, Long Xuyên, An Giang</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900121212</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d981.1671016132383!2d105.43344076955233!3d10.3683759993598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a73196ea0f2b5%3A0x2647254e7322dd9d!2zMTEgxJAuIFBo4bqhbSBOZ-G7jWMgVGjhuqFjaCwgTG9uZyBYdXnDqm4sIEFuIEdpYW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1784957739312!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="vinh-long" data-district="tp-vinhlong">
+              <h3>FASTBITE Vĩnh Long</h3>
+              <p><i class="fa-solid fa-location-dot"></i>50 Trưng Nữ Vương, Long Châu, Vĩnh Long</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900289362</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674.2838140641445!2d105.97016335703093!3d10.254043227376053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a9d2cd0c55317%3A0x49159f4e745d22eb!2zNTAgVHLGsG5nIE7hu68gVsawxqFuZywgTG9uZyBDaMOidSwgVsSpbmggTG9uZyA4OTQzNjcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1784958432247!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="vinh-long" data-district="binh-minh">
+              <h3>FASTBITE Bình Minh</h3>
+              <p><i class="fa-solid fa-location-dot"></i>232 Đường Ngô Quyền, Bình Minh, Vĩnh Long</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900182341</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.52024759939462!2d105.82095104710334!3d10.072519115785951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a07d22435c8ca5%3A0x681a47a791fa4670!2zMjMyIMSQxrDhu51uZyBOZ8O0IFF1eeG7gW4sIELDrG5oIE1pbmgsIFbEqW5oIExvbmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1784958560394!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+            <div class="store-item" data-province="soc-trang" data-district="tp-soctrang">
+              <h3>FASTBITE Sóc Trăng</h3>
+              <p><i class="fa-solid fa-location-dot"></i>242 Nguyễn Huệ, Phú Lợi, Sóc Trăng</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900204736</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983.4754152750568!2d105.97103288605695!3d9.60373572332728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a04df847314ec5%3A0xa6ebfc62537de830!2zMjQyIE5ndXnhu4VuIEh14buHLCBQaMO6IEzhu6NpLCBD4bqnbiBUaMahLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1784958736152!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
+              <div class="store-item" data-province="soc-trang" data-district="my-xuyen">
+              <h3>FASTBITE Mỹ Xuyên</h3>
+              <p><i class="fa-solid fa-location-dot"></i>161A Tỉnh Lộ 934,Mỹ Xuyên, Sóc Trăng</p>
+              <p><i class="fa-regular fa-clock"></i>
+                <strong>9h30-22h</strong></p>
+              <p><i class="fa-solid fa-phone"></i>
+                <strong>1900203132</strong></p>
+              <a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.356118708004!2d105.9804159!3d9.5645381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a04db76331cadb%3A0xdbb1c09ab988185e!2zT21lZ2EgTeG7uSBYdXnDqm4!5e0!3m2!1svi!2s!4v1784959034414!5m2!1svi!2s"
+                target="khung-map" class="btn-map">Xem bản đồ</a>
+            </div>
           </div>
         </div>
 
         <div class="map-section">
           <iframe
             name="khung-map"
+            id="khung-map"
             src="https://maps.google.com/maps?q=144b%203%20tháng%202,%20Xuân%20Khánh,%20Ninh%20Kiều,%20Cần%20Thơ&t=&z=15&ie=UTF8&iwloc=&output=embed"
             style="border:0;"
             allowfullscreen
@@ -98,32 +239,30 @@
 
         <div class="footer-top">
           <div class="newsletter-box">
-            <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
-            <form class="newsletter-form">
+            <span class="box-label"><i class="fa-solid fa-envelope"></i> ĐĂNG KÝ NHẬN TIN:</span>
+            <form class="newsletter-form" id="newsletter">
               <input type="email" placeholder="Nhập email của bạn..." required>
-              <button type="button">Đăng ký</button>
+              <button type="submit">Đăng ký</button>
             </form>
           </div>
 
           <div class="social-box">
             <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
             <div class="social-icons">
-              <a href="#" title="Facebook"><i
+              <a href="https://www.facebook.com/profile.php?id=61592163102456" title="Facebook" target="_blank"><i
                   class="fa-brands fa-facebook"></i></a>
-              <a href="#" title="Instagram"><i
+              <a href="https://www.instagram.com/fastbitevn/" title="Instagram" target="_blank"><i
                   class="fa-brands fa-instagram"></i></a>
-              <a href="#" title="YouTube"><i
+              <a href="https://www.youtube.com/@fastbitevn" title="YouTube" target="_blank"><i
                   class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
         </div>
         <div class="footer-main">
-
           <div class="footer-links">
             <div class="footer-col">
               <h3>CHÍNH SÁCH</h3>
               <ul>
-                <li><a href="#">Tìm kiếm</a></li>
                 <li><a href="GioiThieu.html">Giới thiệu</a></li>
                 <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
               </ul>
@@ -132,9 +271,8 @@
             <div class="footer-col">
               <h3>SẢN PHẨM</h3>
               <ul>
-                <li><a href="#">Sản phẩm khuyến mãi</a></li>
-                <li><a href="#">Sản phẩm nổi bật</a></li>
-                <li><a href="#">Tất cả sản phẩm</a></li>
+                <li><a href="ThucDon.html#Uu-dai">Sản phẩm khuyến mãi</a></li>
+                <li><a href="ThucDon.html">Tất cả sản phẩm</a></li>
               </ul>
             </div>
           </div>
@@ -144,11 +282,11 @@
 
           </div>
           <div class="contact-stack">
-            <a href="#" class="round-btn">
+            <a href="tel:1900558800" class="round-btn">
               <i class="fa fa-phone"></i>
               <span class="contact-info">Gọi ngay cho chúng tôi</span>
             </a>
-            <a href="#" class="round-btn">
+            <a href="#" id="btn-show-contact-form" class="round-btn">
               <i class="fa fa-envelope"></i>
               <span class="contact-info">Đăng ký thông tin và để lại lời nhắn</span>
             </a>
@@ -163,5 +301,20 @@
         </div>
       </div>
     </footer>
+    <div id="contact-modal" class="modal-overlay">
+      <div class="modal-content">
+        <span id="btn-close-modal" class="close-btn">&times;</span>
+        <h4>Để lại lời nhắn cho chúng tôi</h4>
+        <form id="contact-form">
+          <input type="text" placeholder="Họ và tên của bạn *" required>
+          <input type="email" placeholder="Email liên hệ *" required>
+          <input type="tel" id="phone" placeholder="Số điện thoại *" required>
+          <textarea placeholder="Bạn muốn nhắn nhủ điều gì..." rows="4" required></textarea>
+          <button type="submit" class="btn-submit">Gửi thông tin</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/hethongcuahang.js"></script>
+    <script  src="js/footer.js"></script>
   </body>
 </html>
