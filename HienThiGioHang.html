@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Fast Bite</title>
+    <link rel="stylesheet" href="css/ThucDon.css">
+    <link rel="stylesheet" href="css/GioHang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="Fast Bite Logo" />
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mở menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="TrangChu.html">Trang Chủ</a></li>
+                <li><a href="GioiThieu.html">Giới Thiệu</a></li>
+                <li><a href="ThucDon.html">Thực Đơn</a></li>
+                <li><a href="HeThongCuaHang.html">Hệ Thống Cửa Hàng</a></li>
+                <li><a href="LienHe.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <div class="mini-nav">
+            <div class="shopping-cart">
+                <p class="no-ordered-items">0</p>
+                <i class="icon-cart fa fa-shopping-cart"></i>
+            </div>
+
+            <button class="btn-login" onclick="window.location.href = 'login.html'">
+                <span>&#128100;</span> Đăng nhập
+            </button>
+        </div>
+
+    </header>
+
+    <main class="cart-main">
+        <div class="cart-container">
+            <h1 class="cart-title">Giỏ Hàng Của Bạn</h1>
+
+            <div class="cart-table-wrap">
+                <table class="cart-table">
+                    <thead></thead>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+
+            <div class="cart-actions">
+                <a href="ThucDon.html" class="btn-continue">&larr; TIẾP TỤC MUA SẮM</a>
+                <button id="checkoutBtn" class="btn-checkout">TIẾN HÀNH THANH TOÁN</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-top">
+                <div class="newsletter-box">
+                    <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Nhập email của bạn..." required>
+                        <button type="button">Đăng ký</button>
+                    </form>
+                </div>
+
+                <div class="social-box">
+                    <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-main">
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h3>CHÍNH SÁCH</h3>
+                        <ul>
+                            <li><a href="#">Tìm kiếm</a></li>
+                            <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                            <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>SẢN PHẨM</h3>
+                        <ul>
+                            <li><a href="#">Sản phẩm khuyến mãi</a></li>
+                            <li><a href="#">Sản phẩm nổi bật</a></li>
+                            <li><a href="#">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-logo">
+                    <a href="TrangChu.html"><img src="images/logo.png" alt="Fast Bite Logo"></a>
+                </div>
+                <div class="contact-stack">
+                    <a href="#" class="round-btn"><i class="fa fa-phone"></i></a>
+                    <a href="#" class="round-btn"><i class="fa fa-envelope"></i></a>
+                    <a href="#" class="round-btn"><i class="fa fa-map-pin "></i></a>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2026 Fast Bite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/GioHang.js"></script>
+    <script src="js/show-cart.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            const miniNav = document.querySelector('.mini-nav');
+
+            if (mobileMenuBtn && navMenu && miniNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    miniNav.classList.toggle('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (navMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    } else {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
