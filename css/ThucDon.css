@@ -922,3 +922,68 @@ main {
     width: 150px;
   }
 }
+
+/* ============================================
+   WIREFRAME MODE — box EVERY item, THICK borders
+   ============================================ */
+body { outline: 5px solid #e74c3c; }
+
+/* --- Header (red tones) --- */
+.header { outline: 5px dashed #c0392b; }
+.header .logo { outline: 3px solid #e67e22; }
+.header .logo img { outline: 2px dotted #d35400; }
+.header .mobile-menu-btn { outline: 3px solid #e74c3c; }
+.header .mobile-menu-btn i { outline: 2px dotted #c0392b; }
+.header nav { outline: 3px solid #f39c12; }
+.header .nav-menu { outline: 3px solid #f1c40f; }
+.header .nav-menu li { outline: 2px dotted #e67e22; }
+.header .nav-menu li a { outline: 2px dotted #d35400; }
+.header .mini-nav { outline: 3px solid #e74c3c; }
+.header .shopping-cart { outline: 3px dotted #c0392b; }
+.header .no-ordered-items { outline: 2px dotted #e67e22; }
+.header .icon-cart { outline: 2px dotted #d35400; }
+.header .btn-login { outline: 3px solid #d35400; }
+.header .btn-login span { outline: 2px dotted #e74c3c; }
+
+/* --- Main Nav & Products (orange tones) --- */
+.main { outline: 5px dashed #e67e22; }
+.main__nav { outline: 5px dashed #f5821f; }
+.main__nav a { outline: 2px dotted #d35400; }
+.div__sanpham { outline: 3px solid #f39c12; }
+.div__sanpham section { outline: 3px dotted #e67e22; }
+.div__sanpham section h2 { outline: 3px solid #d35400; }
+.sanpham { outline: 3px solid #f1c40f; }
+.img-sanpham { outline: 2px dotted #e67e22; }
+.title-sanpham { outline: 2px dotted #d35400; }
+.info-sanpham { outline: 2px dotted #f39c12; }
+.cost-sanpham { outline: 2px dotted #d35400; }
+.btn-add-cart { outline: 2px solid #e67e22; }
+
+/* --- Footer (pink tones) --- */
+.site-footer { outline: 5px dashed #e91e63; }
+.site-footer .footer-top { outline: 3px solid #c2185b; }
+.site-footer .newsletter-box { outline: 3px solid #f06292; }
+.site-footer .newsletter-box .box-label { outline: 2px dotted #f8bbd0; }
+.site-footer .newsletter-form { outline: 3px dotted #ec407a; }
+.site-footer .newsletter-form input { outline: 2px solid #f48fb1; }
+.site-footer .newsletter-form button { outline: 2px solid #f06292; }
+.site-footer .social-box { outline: 3px solid #ec407a; }
+.site-footer .social-box .box-label { outline: 2px dotted #f8bbd0; }
+.site-footer .social-icons { outline: 3px dotted #d81b60; }
+.site-footer .social-icons a { outline: 2px solid #f06292; }
+.site-footer .social-icons a i { outline: 2px dotted #f8bbd0; }
+.site-footer .footer-main { outline: 3px solid #d81b60; }
+.site-footer .footer-links { outline: 3px solid #f48fb1; }
+.site-footer .footer-col { outline: 3px dotted #f8bbd0; }
+.site-footer .footer-col h3 { outline: 2px solid #f06292; }
+.site-footer .footer-col ul { outline: 2px dotted #ec407a; }
+.site-footer .footer-col ul li { outline: 2px dotted #f48fb1; }
+.site-footer .footer-col ul li a { outline: 2px dotted #f8bbd0; }
+.site-footer .footer-logo { outline: 3px solid #ad1457; }
+.site-footer .footer-logo a { outline: 2px dotted #880e4f; }
+.site-footer .footer-logo a img { outline: 2px dotted #c2185b; }
+.site-footer .contact-stack { outline: 3px solid #880e4f; }
+.site-footer .contact-stack .round-btn { outline: 2px dotted #ce93d8; }
+.site-footer .contact-stack .round-btn i { outline: 2px dotted #f8bbd0; }
+.site-footer .footer-bottom { outline: 3px solid #f06292; }
+.site-footer .footer-bottom p { outline: 2px dotted #f8bbd0; }

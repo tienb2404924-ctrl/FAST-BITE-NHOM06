@@ -41,10 +41,11 @@
       <div class="page-name">
         <h1>Hệ Thống Cửa Hàng</h1>
       </div>
-
+      <!-- Bộ lọc bên trái và danh sách cửa hàng -->
       <div class="layout-wrapper">
         <div class="sidebar">
           <h2>Tìm cửa hàng</h2>
+          <!-- Bộ lọc tỉnh thành, quận-huyện -->
           <div class="form">
             <form>
               <label for="province">Tỉnh thành:</label>
@@ -55,7 +56,7 @@
                 <option value="vinh-long">Vĩnh Long</option>
                 <option value="soc-trang">Sóc Trăng</option>
               </select>
-
+               <!-- data-province được thêm vào để lọc quận/huyện tương ứng của tỉnh thành -->
               <label for="district">Quận - huyện:</label>
               <select id="district">
                 <option value="ninh-kieu" data-province="can-tho">Ninh Kiều</option>
@@ -72,7 +73,7 @@
               </select>
             </form>
           </div>
-
+          <!-- Danh sách cửa hàng -->
           <div class="store-list">
             <div class="store-item" data-province="can-tho" data-district="ninh-kieu">
               <h3>FASTBITE 3/2</h3>
@@ -221,22 +222,22 @@
             </div>
           </div>
         </div>
-
+        <!-- Nhúng bản đồ vào cột bên phải, mỗi khi bấm nút xem bản đồ ở cột bên trái sẽ cập nhật lại src cua iframe -->
         <div class="map-section">
           <iframe
             name="khung-map"
             id="khung-map"
             src="https://maps.google.com/maps?q=144b%203%20tháng%202,%20Xuân%20Khánh,%20Ninh%20Kiều,%20Cần%20Thơ&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            style="border:0;"
             allowfullscreen
             loading="lazy">
           </iframe>
         </div>
       </div>
     </main>
+    <!-- Footer: Liên kết, mạng xã hội, thông tin liên lạc -->
     <footer class="site-footer">
       <div class="container">
-
+        <!-- Đăng ký nhận tin -->
         <div class="footer-top">
           <div class="newsletter-box">
             <span class="box-label"><i class="fa-solid fa-envelope"></i> ĐĂNG KÝ NHẬN TIN:</span>
@@ -245,7 +246,7 @@
               <button type="submit">Đăng ký</button>
             </form>
           </div>
-
+          <!-- Liên kết mạng xã hội -->
           <div class="social-box">
             <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
             <div class="social-icons">
@@ -261,6 +262,7 @@
         <div class="footer-main">
           <div class="footer-links">
             <div class="footer-col">
+              <!-- Liên kết nhanh đến các page của web -->
               <h3>CHÍNH SÁCH</h3>
               <ul>
                 <li><a href="GioiThieu.html">Giới thiệu</a></li>
@@ -276,11 +278,13 @@
               </ul>
             </div>
           </div>
+          <!-- Logo của web khi nhấn vào thì sẽ về trang chủ -->
           <div class="footer-logo">
             <a href="TrangChu.html"><img src="images/logo.png"
                 alt="Fast Bite Logo"></a>
 
           </div>
+          <!-- Các nút liên hệ dạng floating buttons -->
           <div class="contact-stack">
             <a href="tel:1900558800" class="round-btn">
               <i class="fa fa-phone"></i>
@@ -301,6 +305,7 @@
         </div>
       </div>
     </footer>
+    <!-- Form liên hệ: chỉ hiện khi click vào nút liên hệ, được quản lý đóng/mở bởi file footer.js -->
     <div id="contact-modal" class="modal-overlay">
       <div class="modal-content">
         <span id="btn-close-modal" class="close-btn">&times;</span>
@@ -314,6 +319,7 @@
         </form>
       </div>
     </div>
+    <!-- Scrip đặt ở cuối để html được tải nhanh hơn trước khi chạy script -->
     <script src="js/hethongcuahang.js"></script>
     <script  src="js/footer.js"></script>
   </body>

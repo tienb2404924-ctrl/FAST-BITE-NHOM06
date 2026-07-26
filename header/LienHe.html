@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <!-- Khai báo bảng mã ký tự Tiếng Việt -->
+    <meta charset="UTF-8">
+    <!-- Cấu hình hiển thị chuẩn Responsive cho các thiết bị di động -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Bite - Liên Hệ</title>
+
+    <!-- Thư viện CSS tùy chỉnh cho trang Liên hệ -->
+    <link rel="stylesheet" href="./css/LienHe.css">
+    <!-- Thư viện biểu tượng FontAwesome 6 (dùng cho icon MXH và liên hệ) -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+
+    <!-- ================= 1. HEADER - THANH ĐIỀU HƯỚNG BÊN TRÊN ================= -->
+    <header class="header">
+      <!-- Khối chứa Logo thương hiệu -->
+      <div class="logo">
+        <img src="images/logo.png" alt="Fast Bite Logo" />
+      </div>
+
+      <!-- Menu chuyển hướng chính -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="TrangChu.html">Trang Chủ</a></li>
+          <li><a href="GioiThieu.html">Giới Thiệu</a></li>
+          <li><a href="ThucDon.html">Thực Đơn</a></li>
+          <li><a href="HeThongCuaHang.html">Hệ Thống Cửa Hàng</a></li>
+          <li><a href="LienHe.html" class="active">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nút Đăng nhập -->
+      <button class="btn-login"><span>👤</span> Đăng nhập</button>
+    </header>
+
+    <!-- ================= 2. MAIN - NỘI DUNG CHÍNH (BẢN ĐỒ & FORM LIÊN HỆ) ================= -->
+    <main class="main-contact">
+      <div class="container">
+
+        <!-- Khung bao bọc chia 2 cột chính -->
+        <div class="contact-wrapper">
+
+          <!-- Cột bên trái: Bản đồ Google Maps -->
+          <div class="contact-left-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8701525905594!2d105.7703799!3d10.0275724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883b54d5d889%3A0x7d757ddb0677d957!2sOmega%203%20th%C3%A1ng%202!5e0!3m2!1svi!2s!4v1782748958416!5m2!1svi!2s"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+
+          <!-- Cột bên phải: Thông tin cửa hàng & Form phản hồi -->
+          <div class="contact-right-content">
+
+            <!-- Khối hiển thị thông tin liên hệ chi tiết -->
+            <div class="contact-info">
+              <h2>Liên hệ</h2>
+
+              <div class="info-item">
+                <p class="info-label">Địa chỉ của chúng tôi</p>
+                <p><strong>144b Đường 3 tháng 2, Phường Xuân Khánh, Quận Ninh
+                    Kiều, TP Cần Thơ</strong></p>
+              </div>
+
+              <div class="info-item">
+                <p class="info-label">Email chúng tôi</p>
+                <p><strong>fastbite@fastfood.vn</strong></p>
+              </div>
+
+              <div class="info-item">
+                <p class="info-label">Điện thoại</p>
+                <p><strong>1900 55 88 50</strong></p>
+              </div>
+
+              <div class="info-item">
+                <p class="info-label">Thời gian làm việc</p>
+                <p><strong>Thứ 2 đến Thứ 6 từ 9h đến 16h30</strong></p>
+              </div>
+            </div>
+
+            <!-- Khối biểu mẫu nhập liệu thắc mắc -->
+            <div class="contact-form">
+              <h2>Gửi thắc mắc cho chúng tôi</h2>
+
+              <form>
+                <!-- Nhập họ tên -->
+                <input type="text" class="form-input" placeholder="Tên của bạn"
+                  required>
+
+                <!-- Hàng gồm 2 ô: Email và Số điện thoại -->
+                <div class="form-row">
+                  <input type="email" class="form-input"
+                    placeholder="Email của bạn" required>
+                  <input type="tel" class="form-input"
+                    placeholder="Số điện thoại của bạn" required>
+                </div>
+
+                <!-- Ô nhập nội dung thắc mắc nhiều dòng -->
+                <textarea class="form-input" rows="5" placeholder="Nội dung"
+                  required></textarea>
+
+                <!-- Nút xác nhận gửi form -->
+                <button type="submit" class="btn-submit">
+                  GỬI CHO CHÚNG TÔI
+                </button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div> <!-- Kết thúc .container -->
+    </main>
+
+    <!-- ================= 3. FOOTER - CHÂN TRANG ================= -->
+    <footer class="site-footer">
+      <div class="container">
+
+        <!-- Dải Footer trên: Đăng ký nhận tin & Biểu tượng Mạng xã hội -->
+        <div class="footer-top">
+          <!-- Form đăng ký Email -->
+          <div class="newsletter-box">
+            <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Nhập email của bạn..."
+                required />
+              <button type="button">Đăng ký</button>
+            </form>
+          </div>
+
+          <!-- Các kênh Mạng xã hội -->
+          <div class="social-box">
+            <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
+            <div class="social-icons">
+              <a href="#" title="Facebook"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a href="#" title="Instagram"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="#" title="YouTube"><i
+                  class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dải Footer chính: Các cột liên kết nhanh & Logo -->
+        <div class="footer-main">
+          <div class="footer-links">
+            <!-- Cột 1: Chính sách -->
+            <div class="footer-col">
+              <h3>CHÍNH SÁCH</h3>
+              <ul>
+                <li><a href="#">Tìm kiếm</a></li>
+                <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
+              </ul>
+            </div>
+
+            <!-- Cột 2: Sản phẩm -->
+            <div class="footer-col">
+              <h3>SẢN PHẨM</h3>
+              <ul>
+                <li><a href="#">Sản phẩm khuyến mãi</a></li>
+                <li><a href="#">Sản phẩm nổi bật</a></li>
+                <li><a href="#">Tất cả sản phẩm</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Logo khu vực Footer -->
+          <div class="footer-logo">
+            <a href="TrangChu.html"><img src="logo.png"
+                alt="Fast Bite Logo" /></a>
+          </div>
+
+          <!-- Cụm 3 nút Hotline/Email/Bản đồ nhanh ghim góc dưới -->
+          <div class="contact-stack">
+            <a href="#" class="round-btn"><i class="fa fa-phone"></i></a>
+            <a href="#" class="round-btn"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="round-btn"><i class="fa fa-map-pin"></i></a>
+          </div>
+        </div>
+
+        <!-- Dải Footer dưới cùng: Bản quyền -->
+        <div class="footer-bottom">
+          <p>Copyright © 2026 Fast Bite. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
