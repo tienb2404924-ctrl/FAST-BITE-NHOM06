@@ -39,7 +39,7 @@
 │   ├── HeThongCuaHang.css
 │   ├── LienHe.css
 │   ├── login.css
-│   └── GioHang.css                 # Style cho trang giỏ hàng
+│   └── GioHang.css
 │
 ├── js/
 │   ├── trangchu.js                 # Menu mobile responsive (hamburger toggle)
@@ -49,15 +49,18 @@
 │   ├── hethongcuahang.js           # Lọc cửa hàng theo tỉnh/quận + đồng bộ bản đồ
 │   └── footer.js                   # Popup liên hệ (modal), form đăng ký tin, validation SĐT
 │
-├── images/                         # Ảnh (logo, sản phẩm, mascot, gallery...)
+├── images/                         # Ảnh (logo, sản phẩm, mascot, gallery, background...)
 │   ├── logo.png                    # Logo Fast Bite
-│   ├── combo.png                   # Ảnh combo hero section
-│   ├── mascot.png                  # Linh vật (GioiThieu)
-│   ├── Dora.jpg                    # Ảnh sản phẩm mặc định (ThucDon)
-│   ├── m_burger.png / m_chicken.png / m_fries.png / m_drink.png
-│   ├── background.png
-│   ├── restaurant.png              # Ảnh nhà hàng (GioiThieu)
-│   └── image (1-3).png             # Gallery ảnh thực tế (GioiThieu)
+│   ├── combo.png                   # Ảnh combo hero section (TrangChu)
+│   ├── mascot.png                  # Linh vật (GioiThieu sec1)
+│   ├── background.png              # Nền main (ThucDon)
+│   ├── restaurant.png              # Ảnh nhà hàng (GioiThieu sec5)
+│   ├── group.png                   # Nền sec4 giá trị cốt lõi (GioiThieu)
+│   ├── image (1-3).png             # Gallery ảnh thực tế (GioiThieu sec2)
+│   ├── m_burger.png / m_chicken.png / m_fries.png / m_drink.png   # Menu nổi bật (TrangChu)
+│   ├── (Các ảnh sản phẩm riêng cho từng món trong ThucDon)
+│   │   Ngoi1minhtrongdem.png, Ythich.png, Doiduday.png, etc.
+│   └── (favicon_io/ chứa favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png, site.webmanifest)
 │
 ├── favicon_io/
 │   ├── favicon-16x16.png / favicon-32x32.png
@@ -97,10 +100,12 @@
 ### 4. `ThucDon.html` — Thực đơn 🍽️
 **Nội dung:**
 - **Tab navigation:** 5 danh mục (Ưu Đãi, Gà Giòn, Mỳ Ý, Burger, Đồ Uống) — chuyển tab bằng JavaScript, không reload trang
-- **Danh sách món:** Grid sản phẩm với ảnh `Dora.jpg`, tên, mô tả, giá (định dạng VND tự động), nút "Thêm vào giỏ"
+- **Danh sách món:** Grid sản phẩm với ảnh riêng từng món (không còn ảnh mặc định), tên, mô tả, giá (định dạng VND tự động), nút "Thêm vào giỏ" — tổng cộng 19 sản phẩm: 5 Ưu Đãi combo, 4 Gà Giòn, 4 Mỳ Ý, 3 Burger, 3 Đồ Uống
+- **Tab navigation (sticky):** Thanh nav dán trên cùng khi cuộn (`position: sticky; top: 30px`) với hiệu ứng Neumorphism
+- **Background parallax:** `background-attachment: fixed` với ảnh nền
 - **Giỏ hàng (mini):** Icon giỏ hàng + hiển thị số lượng sản phẩm theo thời gian thực, click để sang trang giỏ hàng
 
-**JavaScript (inline + `GioHang.js`):**
+**JavaScript (inline trong ThucDon.html + `GioHang.js`):**
 - Lọc hiển thị theo danh mục (tab switching) với `classList.add/remove`, `querySelectorAll`, `preventDefault`
 - Thêm sản phẩm vào giỏ hàng: kiểm tra tồn tại (dùng `Array.findIndex()`), cập nhật số lượng hoặc thêm mới, lưu `localStorage`
 - Định dạng giá tiền VND tự động qua `toLocaleString('de-DE')` với currency VND
@@ -149,7 +154,7 @@
 - **Tổng kết:** Tổng cộng → **VAT 10%** → Số tiền phải thanh toán — tất cả định dạng VND tự động
 - **Nút hành động:** "← Tiếp tục mua sắm" (về ThucDon) & "Tiến hành thanh toán" (alert + giữ nguyên giỏ)
 
-**JavaScript (`show-cart.js`):**
+**JavaScript (`show-cart.js` + `GioHang.js`):**
 - Đọc dữ liệu giỏ hàng từ `localStorage.getItem('cartItems')` và render ra bảng HTML động (`thead`, `tbody`, `tfoot`)
 - Xoá sản phẩm khỏi giỏ: so sánh `sanpham.id` với mã món trong hàng, cập nhật localStorage + reload
 - Định dạng tiền tệ VND chuyên nghiệp: `Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' })`
@@ -167,9 +172,11 @@
 | **CSS Flexbox** | Header, features bar, footer, contact layout, nav-menu, cart-actions |
 | **CSS Grid** | Menu grid (TrangChu), giá trị cốt lõi (GioiThieu), section items (ThucDon) |
 | **CSS Responsive** | Media queries: 1024px, 768px, 736px, 480px — hamburger menu, layout co giãn |
-| **CSS Pseudo-class & Animation** | `:hover`, `:focus`, `:active`, transitions (scale, shadow, color) |
-| **CSS Positioning** | `position: fixed` (contact-stack floating buttons), `position: sticky` (map), `position: fixed` (modal overlay) |
-| **CSS Modal/Overlay** | Popup liên hệ với backdrop fixed, class `show` toggle, đóng khi click bên ngoài |
+| **CSS Pseudo-class & Animation** | `:hover`, `:focus`, `:active`, transitions (scale, shadow, color), `@keyframes` (slideDown, fadeIn, slideUp) |
+| **CSS Positioning** | `position: fixed` (contact-stack floating buttons, modal overlay), `position: sticky` (tab nav ThucDon, map LienHe) |
+| **CSS Modal/Overlay** | Popup liên hệ với backdrop fixed, class `show` toggle, đóng khi click bên ngoài, animation slideDown |
+| **CSS Neumorphism** | ThucDon tab nav với `box-shadow` inset/outset tạo hiệu ứng nổi/chìm |
+| **CSS Toast Notification** | Component toast 3 dạng (success/info/error) trong TrangChu.css |
 | **JavaScript DOM** | Tab filtering, class toggling, event listeners (`addEventListener`), `querySelectorAll`, `closest()` |
 | **JavaScript LocalStorage** | Lưu giỏ hàng (`cartItems` — array of objects), lưu tài khoản người dùng (`userEmail`, `userPass`) |
 | **JavaScript Array Methods** | `findIndex()`, `forEach()`, `push()`, spread operator, `cloneNode()` |
