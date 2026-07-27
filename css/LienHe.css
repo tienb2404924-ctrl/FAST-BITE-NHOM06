@@ -245,180 +245,323 @@ textarea.form-input {
     background-color: #43a047; /* Đổi sang màu xanh lá đậm hơn khi di chuột vào */
 }
 
-/* Footer */
 .site-footer {
-    background-color: #fff;        /* Màu nền trắng cho toàn bộ footer */
-    border-top: 2px solid #fdf6ec; /* Đường viền trên màu kem tạo đường ranh giới */
-    margin-top: 60px;              /* Khoảng cách lề ngoài phía trên tách khỏi nội dung chính */
+  background-color: #f8f9fa;
+  border-top: 2px solid #fdf6ec;
+  margin-top: 60px;
 }
 
 .site-footer a {
-    color: #555;                    /* Màu chữ mặc định cho các thẻ liên kết trong footer */
-    transition: color 0.2s ease;    /* Hiệu ứng chuyển đổi màu chữ mượt 0.2s khi hover */
+  color: #555;
+  transition: color 0.2s ease;
 }
 
 .footer-top {
-    display: flex;                  /* Bật Flexbox dàn hàng ngang cho dải footer trên */
-    justify-content: space-between; /* Đẩy 2 khối (đăng ký tin & MXH) về 2 phía */
-    align-items: center;            /* Căn giữa các thành phần theo chiều dọc */
-    flex-wrap: wrap;                /* Cho phép rớt dòng nếu màn hình không đủ chỗ */
-    gap: 20px;                      /* Khoảng cách giữa các khối khi rớt dòng */
-    padding: 36px 0;                /* Khoảng đệm lề trong (trên-dưới 36px, trái-phải 0) */
-    border-bottom: 1px solid #eee;  /* Đường viền kẻ xám phân cách phía dưới */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 36px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .newsletter-box, .social-box {
-    display: flex;                  /* Bật Flexbox căn chỉnh nhãn và form/icon */
-    align-items: center;            /* Căn giữa các phần tử con theo chiều dọc */
-    gap: 16px;                      /* Khoảng cách giữa nhãn chữ và nội dung bên cạnh */
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .box-label {
-    font-size: 14px;              /* Cỡ chữ cho nhãn tiêu đề khối */
-    color: #2b2b2b;               /* Màu chữ xám đen */
-    font-weight: 700;             /* Độ đậm của chữ (Bold) */
+  font-size: 14px;
+  color: #2b2b2b;
+  font-weight: 700;
 }
 
 .newsletter-form {
-    display: flex;                 /* Bật Flexbox để ô nhập và nút bấm liền kề nhau */
+  display: flex;
 }
 
 .newsletter-form input {
-    height: 44px;                 /* Chiều cao cố định của ô nhập email */
-    width: 260px;                 /* Chiều rộng ô nhập */
-    padding: 0 20px;              /* Khoảng đệm trái-phải 20px bên trong ô nhập */
-    border: 1px solid #eee;       /* Viền mỏng 1px màu xám nhạt */
-    border-right: none;           /* Bỏ viền bên phải để nối liền vào nút bấm */
-    border-radius: 24px 0 0 24px; /* Bo tròn góc bên trái (trên-trái và dưới-trái) */
-    outline: none;                /* Bỏ đường viền viền xanh mặc định khi click vào */
-    font-family: inherit;         /* Sử dụng cùng font chữ với trang web */
-    color: #1f1f1f;               /* Màu chữ khi nhập nội dung */
+  height: 44px;
+  width: 260px;
+  padding: 0 20px;
+  border: 1px solid #eee;
+  border-right: none;
+  border-radius: 24px 0 0 24px;
+  outline: none;
+  font-family: inherit;
+  color: #1f1f1f;
 }
 
 .newsletter-form input:focus {
-    border-color: #f5821f;        /* Đổi màu viền sang cam khi nhấp chuột vào */
+  border-color: #f5821f;
 }
 
 .newsletter-form button {
-    height: 44px;                 /* Chiều cao bằng với ô nhập để liền khối */
-    padding: 0 28px;              /* Khoảng đệm trái-phải 28px trong nút */
-    background-color: #4caf50;    /* Màu nền xanh lá */
-    color: #fff;                  /* Màu chữ trắng */
-    border: none;                 /* Bỏ viền mặc định của nút bấm */
-    border-radius: 0 24px 24px 0; /* Bo tròn góc bên phải (trên-phải và dưới-phải) */
-    cursor: pointer;              /* Chuyển con trỏ chuột thành hình bàn tay */
-    font-weight: 700;             /* Độ đậm chữ */
-    font-size: 14px;              /* Cỡ chữ trên nút */
-    transition: background-color 0.2s ease; /* Hiệu ứng đổi màu nền mượt 0.2s */
+  height: 44px;
+  padding: 0 28px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 0 24px 24px 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
 }
 
 .newsletter-form button:hover {
-    background-color: #43a047; /* Đổi sang xanh lá đậm hơn khi di chuột vào nút gửi */
+  background-color: #43a047;
 }
 
 .social-icons {
-    display: flex;                  /* Bật Flexbox dàn hàng ngang các biểu tượng mạng xã hội */
-    gap: 12px;                      /* Khoảng cách giữa các icon */
+  display: flex;
+  gap: 12px;
 }
 
 .social-icons a {
-    display: inline-flex;           /* Bật Flexbox nội dòng để dễ căn giữa icon bên trong */
-    justify-content: center;        /* Căn giữa icon theo chiều ngang */
-    align-items: center;            /* Căn giữa icon theo chiều dọc */
-    width: 40px;                    /* Chiều rộng ô icon */
-    height: 40px;                   /* Chiều cao ô icon */
-    background-color: #4caf50;      /* Màu nền xanh lá */
-    color: #fff;                    /* Màu biểu tượng/chữ trắng */
-    border-radius: 50%;             /* Bo tròn 100% tạo thành hình tròn hoàn chỉnh */
-    font-weight: 700;               /* Độ đậm chữ */
-    transition: background-color 0.2s ease, transform 0.2s ease; /* Hiệu ứng mượt cho màu nền và vị trí */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Hiệu ứng khi rê chuột vào icon MXH */
 .social-icons a:hover {
-    background-color: #f5821f;     /* Đổi màu nền sang cam thương hiệu */
-    transform: translateY(-3px);   /* Nảy nhẹ icon lên trên 3px tạo hiệu ứng nổi bật */
+  background-color: #f5821f;
+  transform: translateY(-3px);
 }
 
 .footer-main {
-    display: flex;                  /* Bật Flexbox chia các cột thông tin chính của footer */
-    justify-content: space-between; /* Căn đều khoảng cách giữa các cột trong footer */
-    padding: 60px 0;                /* Khoảng đệm lề trong (trên-dưới 60px, trái-phải 0) */
-    flex-wrap: wrap;                /* Cho phép rớt dòng khi xem trên màn hình nhỏ */
-    gap: 40px;                      /* Khoảng cách giữa các cột khi bị rớt dòng */
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+ 
+  gap: 40px;
 }
 
 .footer-links {
-    display: flex;             /* Bật Flexbox nhóm các cột liên kết trong footer */
-    gap: 100px;                /* Khoảng cách rộng giữa các cột liên kết */
-    flex-wrap: wrap;           /* Cho phép rớt dòng khi màn hình nhỏ */
-    align-items: center;       /* Căn giữa các cột theo chiều dọc */
+  
+  display: flex;
+  gap: 100px;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-
 .footer-logo img {
-    width: 500px;              /* Chiều rộng lớn cho ảnh logo footer */
-    height: auto;              /* Chiều cao tự động co dãn theo tỷ lệ */
-    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt 0.3s cho mọi thuộc tính */
+  width: 500x;
+  height: auto;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
 .footer-logo img:hover {
-    transform: scale(1.05);    /* Phóng to logo nhẹ 5% khi di chuột vào */
+  transform: scale(1.05);
 }
 
 .footer-col h3 {
-    font-size: 15px;          /* Cỡ chữ tiêu đề cột footer */
-    color: #1f1f1f;           /* Màu chữ xám đen */
-    font-weight: 800;         /* Độ đậm chữ cực cao (Extra Bold) */
-    margin-bottom: 24px;      /* Khoảng cách lề dưới tiêu đề */
+  white-space: pre;
+  font-size: 15px;
+  color: #1f1f1f;
+  font-weight: 800;
+  margin-bottom: 24px;
 }
 
 .footer-col ul li {
-    margin-bottom: 14px;      /* Khoảng cách giữa các mục danh sách liên kết */
-    font-size: 14px;          /* Cỡ chữ mục danh sách */
+  white-space: pre;
+  margin-bottom: 14px;
+  font-size: 14px;
 }
 
 .footer-col a:hover {
-    color: #f5821f;           /* Đổi màu chữ liên kết sang cam khi hover */
+  color: #f5821f;
 }
 
-/* Cụm nút liên hệ cố định ở góc màn hình */
 .contact-stack {
-    position: fixed;           /* Ghim cố định vị trí trên màn hình khi cuộn trang */
-    bottom: 50px;              /* Cách mép dưới màn hình 50px */
-    right: 50px;               /* Cách mép phải màn hình 50px */
-    z-index: 999;              /* Thứ tự ưu tiên hiển thị cao nhất (đè lên mọi phần tử) */
-    display: flex;             /* Bật Flexbox quản lý các nút liên hệ */
-    flex-direction: column;    /* Sắp xếp các nút liên hệ theo cột dọc */
-    gap: 15px;                 /* Khoảng cách giữa các nút liên hệ */
+  position: fixed; 
+  bottom: 50px;    
+  right: 50px;     
+  z-index: 999;
+  
+  
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
 }
 
-/* Styling chung cho các nút bấm hình tròn */
 .round-btn {
-    display: flex;              /* Bật Flexbox để căn giữa icon bên trong nút */
-    justify-content: center;    /* Căn giữa icon theo chiều ngang */
-    align-items: center;        /* Căn giữa icon theo chiều dọc */
-    width: 48px;                /* Chiều rộng nút tròn */
-    height: 48px;               /* Chiều cao nút tròn */
-    background-color: #f5821f;  /* Màu nền cam thương hiệu */
-    color: #fff !important;     /* Ép màu icon/chữ trắng (ưu tiên tối đa) */
-    border-radius: 50%;         /* Bo tròn 100% tạo thành nút hình tròn */
-    font-size: 20px;            /* Cỡ icon/chữ bên trong nút */
-    box-shadow: 0 6px 20px rgba(245, 130, 31, 0.25); /* Đổ bóng màu cam nhẹ tao độ nổi */
-    transition: background-color 0.2s ease, transform 0.2s ease; /* Hiệu ứng mượt khi hover */
-    text-decoration: none;      /* Bỏ gạch chân mặc định của thẻ a */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: #f5821f;
+  color: #fff !important;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 6px 20px rgba(245, 130, 31, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration:none;
 }
 
 .round-btn:hover {
-    background-color: #e0701a;  /* Đổi sang màu cam đậm hơn khi hover */
-    transform: translateY(-4px);/* Nút nảy nhẹ lên trên 4px tạo hiệu ứng tương tác */
+  background-color: #e0701a;
+  transform: translateY(-4px);
+}
+.contact-info {
+  position: absolute;
+  right: 120%; 
+  background-color: #43a047;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap; 
+  
+  opacity: 1;
+  visibility: hidden;
+}
+.round-btn:hover .contact-info {
+  opacity: 1;
+  visibility: visible;
+ 
 }
 
 .footer-bottom {
-    text-align: center;           /* Căn giữa văn bản bản quyền/thông tin chân trang */
-    padding: 24px 0;              /* Khoảng đệm trong trên-dưới 24px */
-    font-size: 13px;              /* Cỡ chữ nhỏ vừa mắt */
-    color: #888;                  /* Màu chữ xám nhạt */
-    border-top: 1px solid #eee;   /* Đường viền kẻ ngang phân cách phía trên */
+  text-align: center;
+  padding: 24px 0;
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid #eee;
+}
+@media (max-width:768px){
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+  
+  .newsletter-box, .social-box {
+    flex-direction: column;
+  }
+  
+  .footer-main {
+    flex-direction: column;
+    align-items:center ;
+    text-align: center;
+  }
+  .footer-links {
+   
+    justify-content:center ;
+    gap: 40px;
+  }
+
+  .contact-stack {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    
+  }
+  .contact-info{
+    right: auto;
+    bottom: 130%;
+    
+  }
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: slideDown 0.3s ease-out; 
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  font-weight: bold;
+}
+.close-btn:hover { color: #d82d27; }
+
+.modal-content h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Cấu trúc form bên trong popup */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #d82d27;
+}
+
+
+.btn-submit {
+  background-color: #f5821f; 
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn-submit:hover {
+  background-color: #f89009e9;
 }
 
 /* ================= RESPONSIVE MOBILE ================= */
