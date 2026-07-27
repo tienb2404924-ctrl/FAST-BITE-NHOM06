@@ -108,35 +108,33 @@
 
     <footer class="site-footer">
       <div class="container">
+
         <div class="footer-top">
           <div class="newsletter-box">
-            <span class="box-label">✉ ĐĂNG KÝ NHẬN TIN:</span>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Nhập email của bạn..."
-                required />
-              <button type="button">Đăng ký</button>
+            <span class="box-label"><i class="fa-solid fa-envelope"></i> ĐĂNG KÝ NHẬN TIN:</span>
+            <form class="newsletter-form" id="newsletter">
+              <input type="email" placeholder="Nhập email của bạn..." required>
+              <button type="submit">Đăng ký</button>
             </form>
           </div>
 
           <div class="social-box">
             <span class="box-label">KẾT NỐI VỚI CHÚNG TÔI:</span>
             <div class="social-icons">
-              <a href="#" title="Facebook"><i
+              <a href="https://www.facebook.com/profile.php?id=61592163102456" title="Facebook" target="_blank"><i
                   class="fa-brands fa-facebook"></i></a>
-              <a href="#" title="Instagram"><i
+              <a href="https://www.instagram.com/fastbitevn/" title="Instagram" target="_blank"><i
                   class="fa-brands fa-instagram"></i></a>
-              <a href="#" title="YouTube"><i
+              <a href="https://www.youtube.com/@fastbitevn" title="YouTube" target="_blank"><i
                   class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
         </div>
-
         <div class="footer-main">
           <div class="footer-links">
             <div class="footer-col">
               <h3>CHÍNH SÁCH</h3>
               <ul>
-                <li><a href="#">Tìm kiếm</a></li>
                 <li><a href="GioiThieu.html">Giới thiệu</a></li>
                 <li><a href="HeThongCuaHang.html">Hệ thống cửa hàng</a></li>
               </ul>
@@ -145,30 +143,50 @@
             <div class="footer-col">
               <h3>SẢN PHẨM</h3>
               <ul>
-                <li><a href="#">Sản phẩm khuyến mãi</a></li>
-                <li><a href="#">Sản phẩm nổi bật</a></li>
-                <li><a href="#">Tất cả sản phẩm</a></li>
+                <li><a href="ThucDon.html#Uu-dai">Sản phẩm khuyến mãi</a></li>
+                <li><a href="ThucDon.html">Tất cả sản phẩm</a></li>
               </ul>
             </div>
           </div>
-
           <div class="footer-logo">
-            <a href="TrangChu.html"><img src="logo.png"
-                alt="Fast Bite Logo" /></a>
-          </div>
+            <a href="TrangChu.html"><img src="images/logo.png"
+                alt="Fast Bite Logo"></a>
 
+          </div>
           <div class="contact-stack">
-            <a href="#" class="round-btn"><i class="fa fa-phone"></i></a>
-            <a href="#" class="round-btn"><i class="fa fa-envelope"></i></a>
-            <a href="#" class="round-btn"><i class="fa fa-map-pin"></i></a>
+            <a href="tel:1900558800" class="round-btn">
+              <i class="fa fa-phone"></i>
+              <span class="contact-info">Gọi ngay cho chúng tôi</span>
+            </a>
+            <a href="#" id="btn-show-contact-form" class="round-btn">
+              <i class="fa fa-envelope"></i>
+              <span class="contact-info">Đăng ký thông tin và để lại lời nhắn</span>
+            </a>
+            <a href="/LienHe.html" class="round-btn">
+              <i class="fa fa-map-pin "></i>
+            <span class="contact-info">Xem địa chỉ doanh nghiệp</span>
+            </a>
           </div>
         </div>
-
         <div class="footer-bottom">
           <p>Copyright © 2026 Fast Bite. All rights reserved.</p>
         </div>
       </div>
     </footer>
+    <div id="contact-modal" class="modal-overlay">
+      <div class="modal-content">
+        <span id="btn-close-modal" class="close-btn">&times;</span>
+        <h4>Để lại lời nhắn cho chúng tôi</h4>
+        <form id="contact-form">
+          <input type="text" placeholder="Họ và tên của bạn *" required>
+          <input type="email" placeholder="Email liên hệ *" required>
+          <input type="tel" id="phone" placeholder="Số điện thoại *" required>
+          <textarea placeholder="Bạn muốn nhắn nhủ điều gì..." rows="4" required></textarea>
+          <button type="submit" class="btn-submit">Gửi thông tin</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/footer.js"></script>
 
   </body>
 </html>
