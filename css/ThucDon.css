@@ -701,7 +701,7 @@ main {
 /****************************************************/
 
 .site-footer {
-  background-color: #fff;
+  background-color: #f8f9fa;
   border-top: 2px solid #fdf6ec;
   margin-top: 60px;
 }
@@ -721,8 +721,7 @@ main {
   border-bottom: 1px solid #eee;
 }
 
-.newsletter-box,
-.social-box {
+.newsletter-box, .social-box {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -798,22 +797,21 @@ main {
   display: flex;
   justify-content: space-between;
   padding: 60px 0;
-  flex-wrap: wrap;
+ 
   gap: 40px;
 }
 
 .footer-links {
+  
   display: flex;
   gap: 100px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
 }
-
 .footer-logo img {
   width: 500x;
   height: auto;
-
-
+  flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
@@ -822,6 +820,7 @@ main {
 }
 
 .footer-col h3 {
+  white-space: pre;
   font-size: 15px;
   color: #1f1f1f;
   font-weight: 800;
@@ -829,6 +828,7 @@ main {
 }
 
 .footer-col ul li {
+  white-space: pre;
   margin-bottom: 14px;
   font-size: 14px;
 }
@@ -838,18 +838,19 @@ main {
 }
 
 .contact-stack {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
+  position: fixed; 
+  bottom: 50px;    
+  right: 50px;     
   z-index: 999;
-
-
+  
+  
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 15px; 
 }
 
 .round-btn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -861,12 +862,31 @@ main {
   font-size: 20px;
   box-shadow: 0 6px 20px rgba(245, 130, 31, 0.25);
   transition: background-color 0.2s ease, transform 0.2s ease;
-  text-decoration: none;
+  text-decoration:none;
 }
 
 .round-btn:hover {
   background-color: #e0701a;
   transform: translateY(-4px);
+}
+.contact-info {
+  position: absolute;
+  right: 120%; 
+  background-color: #43a047;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap; 
+  
+  opacity: 1;
+  visibility: hidden;
+}
+.round-btn:hover .contact-info {
+  opacity: 1;
+  visibility: visible;
+ 
 }
 
 .footer-bottom {
@@ -876,28 +896,25 @@ main {
   color: #888;
   border-top: 1px solid #eee;
 }
-
-/*Reponsive*/
-@media (max-width: 768px) {
+@media (max-width:768px){
   .footer-top {
     flex-direction: column;
     text-align: center;
     gap: 24px;
   }
-
-  .newsletter-box,
-  .social-box {
+  
+  .newsletter-box, .social-box {
     flex-direction: column;
   }
-
+  
   .footer-main {
     flex-direction: column;
-    align-items: center;
+    align-items:center ;
     text-align: center;
   }
-
   .footer-links {
-    justify-content: center;
+   
+    justify-content:center ;
     gap: 40px;
   }
 
@@ -905,85 +922,99 @@ main {
     flex-direction: row;
     justify-content: center;
     margin-top: 20px;
+    
+  }
+  .contact-info{
+    right: auto;
+    bottom: 130%;
+    
   }
 }
-
-@media (max-width: 480px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .newsletter-form input {
-    width: 180px;
-  }
-
-  .footer-logo img {
-    width: 150px;
-  }
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
 }
 
-/* ============================================
-   WIREFRAME MODE — box EVERY item, THICK borders
-   ============================================ */
-body { outline: 5px solid #e74c3c; }
+.modal-overlay.show {
+  display: flex;
+}
 
-/* --- Header (red tones) --- */
-.header { outline: 5px dashed #c0392b; }
-.header .logo { outline: 3px solid #e67e22; }
-.header .logo img { outline: 2px dotted #d35400; }
-.header .mobile-menu-btn { outline: 3px solid #e74c3c; }
-.header .mobile-menu-btn i { outline: 2px dotted #c0392b; }
-.header nav { outline: 3px solid #f39c12; }
-.header .nav-menu { outline: 3px solid #f1c40f; }
-.header .nav-menu li { outline: 2px dotted #e67e22; }
-.header .nav-menu li a { outline: 2px dotted #d35400; }
-.header .mini-nav { outline: 3px solid #e74c3c; }
-.header .shopping-cart { outline: 3px dotted #c0392b; }
-.header .no-ordered-items { outline: 2px dotted #e67e22; }
-.header .icon-cart { outline: 2px dotted #d35400; }
-.header .btn-login { outline: 3px solid #d35400; }
-.header .btn-login span { outline: 2px dotted #e74c3c; }
+.modal-content {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: slideDown 0.3s ease-out; 
+}
 
-/* --- Main Nav & Products (orange tones) --- */
-.main { outline: 5px dashed #e67e22; }
-.main__nav { outline: 5px dashed #f5821f; }
-.main__nav a { outline: 2px dotted #d35400; }
-.div__sanpham { outline: 3px solid #f39c12; }
-.div__sanpham section { outline: 3px dotted #e67e22; }
-.div__sanpham section h2 { outline: 3px solid #d35400; }
-.sanpham { outline: 3px solid #f1c40f; }
-.img-sanpham { outline: 2px dotted #e67e22; }
-.title-sanpham { outline: 2px dotted #d35400; }
-.info-sanpham { outline: 2px dotted #f39c12; }
-.cost-sanpham { outline: 2px dotted #d35400; }
-.btn-add-cart { outline: 2px solid #e67e22; }
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-/* --- Footer (pink tones) --- */
-.site-footer { outline: 5px dashed #e91e63; }
-.site-footer .footer-top { outline: 3px solid #c2185b; }
-.site-footer .newsletter-box { outline: 3px solid #f06292; }
-.site-footer .newsletter-box .box-label { outline: 2px dotted #f8bbd0; }
-.site-footer .newsletter-form { outline: 3px dotted #ec407a; }
-.site-footer .newsletter-form input { outline: 2px solid #f48fb1; }
-.site-footer .newsletter-form button { outline: 2px solid #f06292; }
-.site-footer .social-box { outline: 3px solid #ec407a; }
-.site-footer .social-box .box-label { outline: 2px dotted #f8bbd0; }
-.site-footer .social-icons { outline: 3px dotted #d81b60; }
-.site-footer .social-icons a { outline: 2px solid #f06292; }
-.site-footer .social-icons a i { outline: 2px dotted #f8bbd0; }
-.site-footer .footer-main { outline: 3px solid #d81b60; }
-.site-footer .footer-links { outline: 3px solid #f48fb1; }
-.site-footer .footer-col { outline: 3px dotted #f8bbd0; }
-.site-footer .footer-col h3 { outline: 2px solid #f06292; }
-.site-footer .footer-col ul { outline: 2px dotted #ec407a; }
-.site-footer .footer-col ul li { outline: 2px dotted #f48fb1; }
-.site-footer .footer-col ul li a { outline: 2px dotted #f8bbd0; }
-.site-footer .footer-logo { outline: 3px solid #ad1457; }
-.site-footer .footer-logo a { outline: 2px dotted #880e4f; }
-.site-footer .footer-logo a img { outline: 2px dotted #c2185b; }
-.site-footer .contact-stack { outline: 3px solid #880e4f; }
-.site-footer .contact-stack .round-btn { outline: 2px dotted #ce93d8; }
-.site-footer .contact-stack .round-btn i { outline: 2px dotted #f8bbd0; }
-.site-footer .footer-bottom { outline: 3px solid #f06292; }
-.site-footer .footer-bottom p { outline: 2px dotted #f8bbd0; }
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  font-weight: bold;
+}
+.close-btn:hover { color: #d82d27; }
+
+.modal-content h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Cấu trúc form bên trong popup */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #d82d27;
+}
+
+
+.btn-submit {
+  background-color: #f5821f; 
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn-submit:hover {
+  background-color: #f89009e9;
+}
